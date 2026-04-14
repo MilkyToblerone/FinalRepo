@@ -8,6 +8,8 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private MikuState mikuState;
+    private TetoState tetoState;
 
     public Game1()
     {
@@ -26,8 +28,14 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+        tetoState = new TetoState(this,_spriteBatch);
+        mikuState = new MikuState(this,_spriteBatch,tetoState);
+        mikuState.LoadContent();
+        tetoState.LoadContent();
+        tetoState.nextState = mikuState;
 
-        // TODO: use this.Content to load your game content here
+        StateManager.Initialize(mikuState);
+        
     }
 
     protected override void Update(GameTime gameTime)
@@ -36,7 +44,7 @@ public class Game1 : Game
             Exit();
 
         // TODO: Add your update logic here
-
+        StateManager.GetCurrentState().Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -44,8 +52,9 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        // TODO: Add your drawing code here
-
+        _spriteBatch.Begin();
+        StateManager.GetCurrentState().Draw(gameTime);
         base.Draw(gameTime);
+        _spriteBatch.End();
     }
 }

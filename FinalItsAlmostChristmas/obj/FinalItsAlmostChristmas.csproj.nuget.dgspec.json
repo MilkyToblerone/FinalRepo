@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {}
+    "c:\\Users\\H-LAB06-007\\Desktop\\FinalGP2\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {}
   },
   "projects": {
-    "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {
+    "c:\\Users\\H-LAB06-007\\Desktop\\FinalGP2\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
+        "projectUniqueName": "c:\\Users\\H-LAB06-007\\Desktop\\FinalGP2\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
         "projectName": "FinalItsAlmostChristmas",
-        "projectPath": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
-        "packagesPath": "C:\\Users\\doguh\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\obj\\",
+        "projectPath": "c:\\Users\\H-LAB06-007\\Desktop\\FinalGP2\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
+        "packagesPath": "C:\\Users\\H-LAB06-007\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\H-LAB06-007\\Desktop\\FinalGP2\\FinalRepo\\FinalItsAlmostChristmas\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\doguh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\H-LAB06-007\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
