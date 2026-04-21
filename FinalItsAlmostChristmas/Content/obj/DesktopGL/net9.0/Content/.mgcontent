@@ -5,10 +5,14 @@
   <Config />
   <SourceFiles>
     <File>c:/Users/H-LAB06-007/Desktop/FinalGP2/FinalRepo/FinalItsAlmostChristmas/Content/BR_Miku.png</File>
+    <File>c:/Users/H-LAB06-007/Desktop/FinalGP2/FinalRepo/FinalItsAlmostChristmas/Content/Bubble.png</File>
+    <File>c:/Users/H-LAB06-007/Desktop/FinalGP2/FinalRepo/FinalItsAlmostChristmas/Content/Circle.png</File>
     <File>c:/Users/H-LAB06-007/Desktop/FinalGP2/FinalRepo/FinalItsAlmostChristmas/Content/fatass.jpg</File>
     <File>c:/Users/H-LAB06-007/Desktop/FinalGP2/FinalRepo/FinalItsAlmostChristmas/Content/pissmiku.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

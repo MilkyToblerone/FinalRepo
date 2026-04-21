@@ -68,3 +68,5 @@ c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debu
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debug\net9.0\FinalItsAlmostChristmas.pdb
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debug\net9.0\FinalItsAlmostChristmas.genruntimeconfig.cache
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debug\net9.0\ref\FinalItsAlmostChristmas.dll
+c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Bubble.xnb
+c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Circle.xnb

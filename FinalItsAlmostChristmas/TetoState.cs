@@ -9,6 +9,11 @@ namespace FinalItsAlmostChristmas
     public class TetoState : GameState
     {
         Texture2D tetoTexture;
+        ScaleableSprite bubbleImage;
+        ScaleableSprite bubbleCircle;
+        ScaleableSprite scaleableTeto;
+        
+        
         public GameState nextState;
         public TetoState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
@@ -24,17 +29,17 @@ namespace FinalItsAlmostChristmas
         public override void LoadContent()
         {
             tetoTexture = game1.Content.Load<Texture2D>("fatass");
+            bubbleImage.spriteTexture = game1.Content.Load<Texture2D>("Bubble");
+            bubbleCircle.spriteTexture = game1.Content.Load<Texture2D>("Circle");
+            bubbleImage = new ScaleableSprite(Vector2.Zero,1);
         }
         public override void Update(GameTime gameTime)
         {
-            if (Mouse.GetState().LeftButton == ButtonState.Pressed)
-            {
-                StateManager.SwitchState(nextState);
-            }
+            scaleableTeto.scale += 0.001f;
         }
         public override void Draw(GameTime gameTime)
         {
-            _spritebatch.Draw(tetoTexture,new Rectangle(100,100,500,500),Color.White);
+            scaleableTeto.Draw(_spritebatch);
         }
     }
 }
