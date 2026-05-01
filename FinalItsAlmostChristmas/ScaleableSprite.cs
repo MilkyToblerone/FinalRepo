@@ -16,6 +16,10 @@ class ScaleableSprite : Sprite
 
     public override void Draw(SpriteBatch spriteBatch)
     {
-        spriteBatch.Draw(spriteTexture,texturePos,rect,Color.White,0,Vector2.Zero,scale,SpriteEffects.None,0);
+        if (spriteTexture != null)
+        {
+            Vector2 origin = new Vector2(spriteTexture.Width / 2f, spriteTexture.Height / 2f);
+            spriteBatch.Draw(spriteTexture, texturePos, sourceRect, Color.White, 0, origin, scale, SpriteEffects.None, 0);
+        }
     }
 }

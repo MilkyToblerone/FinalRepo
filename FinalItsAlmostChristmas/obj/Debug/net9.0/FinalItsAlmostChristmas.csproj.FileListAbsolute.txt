@@ -70,3 +70,9 @@ c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debu
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\obj\Debug\net9.0\ref\FinalItsAlmostChristmas.dll
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Bubble.xnb
 c:\Users\H-LAB06-007\Desktop\FinalGP2\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Circle.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BR_Miku.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Bubble.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Circle.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\fatass.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\pissmiku.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\obj\Debug\net9.0\FinalItsAlmostChristmas.sourcelink.json

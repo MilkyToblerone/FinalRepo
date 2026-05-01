@@ -1,19 +1,24 @@
+using FinalItsAlmostChristmas;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 class RythmBubble
 {
-    ScaleableSprite bubbleBase;
-    ScaleableSprite bubbleCircle;
-    bool isInstantiated;
-    float tickDownSpeed;
-    public RythmBubble(ScaleableSprite bubbleBase, ScaleableSprite bubbleCircle,float tickDownSpeed)
+    private ScaleableSprite bubbleBase;
+    private ScaleableSprite bubbleCircle;
+    private float tickDownSpeed;
+    public bool isActive { get; private set; }
+
+    public RythmBubble(Texture2D baseTexture, Texture2D circleTexture, Vector2 position, float initialScale, float tickDownSpeed)
     {
-        this.bubbleBase = bubbleBase;
-        this.bubbleCircle = bubbleCircle;
         this.tickDownSpeed = tickDownSpeed;
+        bubbleBase = new ScaleableSprite(baseTexture, position, initialScale);
+        bubbleCircle = new ScaleableSprite(circleTexture, position, initialScale * 1.5f);
+        isActive = true;
     }
-    public void TickDownBubble()
+
+    //  ########## RYTHMBUBBLE LOGIC #######################
+    public void Update()
     {
         if (bubbleCircle.scale > 0)
         {
@@ -22,21 +27,16 @@ class RythmBubble
         else
         {
             bubbleCircle.scale = 0;
+            isActive = false;
         }
     }
-    public void SpawnCircle(float baseScale,SpriteBatch spriteBatch)
+
+    public void Draw(SpriteBatch spriteBatch)
     {
-        if (!isInstantiated)
+        if (isActive)
         {
-            bubbleBase.scale = baseScale;
-            bubbleCircle.scale = baseScale * 1.5f;
-            isInstantiated = true;
+            bubbleBase.Draw(spriteBatch);
+            bubbleCircle.Draw(spriteBatch);
         }
-        DrawCircle(spriteBatch);
-    }
-    public void DrawCircle(SpriteBatch spriteBatch)
-    {
-        bubbleBase.Draw(spriteBatch);
-        bubbleCircle.Draw(spriteBatch);
     }
 }
