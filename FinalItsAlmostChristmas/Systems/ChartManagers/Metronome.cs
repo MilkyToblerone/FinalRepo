@@ -1,23 +1,41 @@
+using Microsoft.Xna.Framework;
+
 class ChartMetronome
 {
+    public delegate void BeatChanged(int currentBeat);
+    static BeatChanged beatChanged;
     float songBPM;
     float songTime;
     public float beatTimeMS;
-    public float currentBeat;
-    public float elapsedTime;
-    ChartMetronome currentChartMetronome;
-    ChartMetronome(float songBPM,float songTime)
+    public int currentBeat;
+    float beatTimeThreshold;
+
+    public ChartMetronome()
     {
-        songBPM = this.songBPM;
-        songTime = this.songTime;
+        ChartManager.getInstance().SongStart += StartSong;
+        beatChanged += ChartManager.getInstance().ChangeCurrentBeat; 
+    }
+    
+    public void Initilize()
+    {
+
     }
     public void StartSong()
     {
-        if (currentChartMetronome != null) currentChartMetronome = null;
-        currentChartMetronome = new(ChartManager.getInstance().songBPM, ChartManager.getInstance().songTime);
         // 1000 is there for the miliseconds.
-        currentChartMetronome.beatTimeMS = currentChartMetronome.songTime / currentChartMetronome.songBPM * 1000;
-        currentChartMetronome.elapsedTime = 0f;
+        currentBeat = 0;
+        beatTimeMS = songTime / songBPM * 1000;
+        beatTimeThreshold = beatTimeMS;
+    }
+
+    public void UpdateLogic()
+    {
+        if (ChartManager.getInstance().songElapsedTime >= beatTimeThreshold)
+        {
+            currentBeat++;
+            beatTimeThreshold += beatTimeMS;
+            beatChanged.Invoke(currentBeat);
+        }
     }
 
 

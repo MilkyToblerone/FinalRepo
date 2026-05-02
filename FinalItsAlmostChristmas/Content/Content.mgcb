@@ -13,6 +13,12 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin BadApple.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:BadApple.mp3
+
 #begin BR_Miku.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -72,4 +78,10 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:pissmiku.jpg
+
+#begin UNBEATABLE OST - BOOKEND  -opening version-.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:UNBEATABLE OST - BOOKEND  -opening version-.mp3;BookendOpening.mp3
 

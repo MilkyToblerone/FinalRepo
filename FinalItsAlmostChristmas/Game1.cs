@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace FinalItsAlmostChristmas;
 
@@ -10,6 +11,7 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private MikuState mikuState;
     private TetoState tetoState;
+    
 
     public Game1()
     {
@@ -27,6 +29,7 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
+        ChartManager.getInstance().Load();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         tetoState = new TetoState(this,_spriteBatch);
         mikuState = new MikuState(this,_spriteBatch,tetoState);
