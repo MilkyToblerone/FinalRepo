@@ -21,9 +21,9 @@ class ChartManager
     public ChartMetronome chartMetronome;
     public MusicPlayer musicPlayer;
     public Action SongStart;
-    public float songTime;
-    public float songBPM;
-    public float songElapsedTime;
+    public double songTime;
+    public double songBPM;
+    public double songElapsedTime;
     public string songName;
     public int currentBeat;
     public void Init()
@@ -37,8 +37,8 @@ class ChartManager
     }
     public void Update()
     {
-        chartMetronome.UpdateLogic();
         musicPlayer.UpdateLogic();
+        chartMetronome.UpdateLogic();
     }
     public void ChangeCurrentBeat(int beatToBe)
     {
@@ -47,7 +47,7 @@ class ChartManager
     public void StartingSong(Song song, int BPM)
     {
         musicPlayer.selectedSong = song;
-        songTime = (float)(song.Duration.TotalMilliseconds);
+        songTime = (double)(song.Duration.TotalMilliseconds);
         songBPM = BPM;
         SongStart.Invoke();
     }

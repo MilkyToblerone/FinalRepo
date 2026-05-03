@@ -23,19 +23,19 @@ public class Game1 : Game
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
-
+        TexturesAndFonts.getInstance().game1 = this;
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
+        TexturesAndFonts.getInstance().Load();
         ChartManager.getInstance().Load();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
         tetoState = new TetoState(this,_spriteBatch);
         mikuState = new MikuState(this,_spriteBatch,tetoState);
         mikuState.LoadContent();
         tetoState.LoadContent();
-        tetoState.nextState = mikuState;
 
         StateManager.Initialize(mikuState);
         

@@ -12,14 +12,14 @@ namespace FinalItsAlmostChristmas
     {
         private Texture2D bubbleBaseTexture;
         private Texture2D bubbleCircleTexture;
-        private ScaleableSprite scaleableTeto;
+        private SpriteFont comboFont;
         Random random = new();
         float timer =0;
         
         private List<RythmBubble> rhythmBubbles;
         private float bubbleTickDownSpeed = 0.0005f;
         private float bubbleInitialScale = 0.05f;
-        Song bookendSong;
+
         
         public GameState nextState;
         
@@ -38,18 +38,17 @@ namespace FinalItsAlmostChristmas
 
         public override void LoadContent()
         {
-            bookendSong = game1.Content.Load<Song>("BookendOpening");
+            nextState = new SongState(game1, _spritebatch);
+            comboFont = game1.Content.Load<SpriteFont>("Fonts/FightFont");
             bubbleBaseTexture = game1.Content.Load<Texture2D>("Bubble");
             bubbleCircleTexture = game1.Content.Load<Texture2D>("Circle");
-            scaleableTeto = new ScaleableSprite(game1.Content.Load<Texture2D>("fatass"), Vector2.Zero, 0.5f);
         }
 
         public override void Update(GameTime gameTime)
         {
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
-                if (MediaPlayer.State == MediaState.Playing) return;
-                ChartManager.getInstance().StartingSong(bookendSong, 123);
+                StateManager.SwitchState(nextState);
                 
             }
             timer += 0.1f;
@@ -73,7 +72,7 @@ namespace FinalItsAlmostChristmas
 
         public override void Draw(GameTime gameTime)
         {
-            
+            _spritebatch.DrawString(comboFont, "asdasda", new Vector2(100, 100),Color.White);
             foreach (var bubble in rhythmBubbles)
             {
                 bubble.Draw(_spritebatch);

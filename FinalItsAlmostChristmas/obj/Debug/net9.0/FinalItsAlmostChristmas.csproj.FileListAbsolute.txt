@@ -80,3 +80,4 @@ c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BookendOpening.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BadApple.ogg
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BadApple.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Fonts\FightFont.xnb

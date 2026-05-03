@@ -4,8 +4,8 @@ using Microsoft.Xna.Framework.Media;
 
 class MusicPlayer
 {
-    float maxSongTime;
-    float songElapsedTime;
+    double maxSongTime;
+    double songElapsedTime;
     public Song selectedSong;
     public static Action SongEnd;
     public void Load()
@@ -24,17 +24,13 @@ class MusicPlayer
     public void StartSong()
     {
         maxSongTime = ChartManager.getInstance().songTime;
+        ChartManager.getInstance().songElapsedTime = 0;
         MediaPlayer.Play(selectedSong);
     }
     public void UpdateLogic()
     {
-        songElapsedTime += (float)(MediaPlayer.PlayPosition.TotalMilliseconds);
+        songElapsedTime = (double)(MediaPlayer.PlayPosition.TotalMilliseconds);
         ChartManager.getInstance().songElapsedTime = songElapsedTime;
         
-        if (songElapsedTime >= maxSongTime)
-        {
-            SongEnd.Invoke();
-            MediaPlayer.Stop();
-        }
     }
 }

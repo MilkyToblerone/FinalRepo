@@ -4,11 +4,11 @@ class ChartMetronome
 {
     public delegate void BeatChanged(int currentBeat);
     static BeatChanged beatChanged;
-    float songBPM;
-    float songTime;
-    public float beatTimeMS;
+    double songBPM;
+    double songTime;
+    public double beatTimeMS;
     public int currentBeat;
-    float beatTimeThreshold;
+    double beatTimeThreshold;
 
     public ChartMetronome()
     {
@@ -22,9 +22,10 @@ class ChartMetronome
     }
     public void StartSong()
     {
-        // 1000 is there for the miliseconds.
+        // Calculate beat duration in milliseconds: 60000ms / BPM = ms per beat
         currentBeat = 0;
-        beatTimeMS = songTime / songBPM * 1000;
+        songBPM = ChartManager.getInstance().songBPM;
+        beatTimeMS = 60000.0 / songBPM;
         beatTimeThreshold = beatTimeMS;
     }
 
