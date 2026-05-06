@@ -6,6 +6,7 @@ class TexturesAndFonts
 {
     public Game1 game1;
     public Song bookendSong;
+    public Song badApple;
 
     public SpriteFont fightFont;
 
@@ -25,6 +26,7 @@ class TexturesAndFonts
     }
     public void Load()
     {
+        badApple = game1.Content.Load<Song>("BadApple");
         bookendSong = game1.Content.Load<Song>("BookendOpening");
         fightFont = game1.Content.Load<SpriteFont>("Fonts/FightFont");
     }
