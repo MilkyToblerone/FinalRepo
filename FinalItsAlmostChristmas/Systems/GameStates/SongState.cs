@@ -4,6 +4,7 @@ using FinalItsAlmostChristmas;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace FinalItsAlmostChristmas
 {
@@ -39,7 +40,7 @@ namespace FinalItsAlmostChristmas
         }
         public override void Update(GameTime gameTime)
         {
-            ChartManager.getInstance().Update();
+            ChartManager.getInstance().Update(gameTime);
             Countdown(gameTime);
             UpdateFadeIn(gameTime);
         }

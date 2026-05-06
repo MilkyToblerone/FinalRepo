@@ -1,4 +1,5 @@
 using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Media;
 
 class ChartManager
@@ -20,9 +21,10 @@ class ChartManager
     //SINGLETON LOGIC ENDS
     public ChartMetronome chartMetronome;
     public MusicPlayer musicPlayer;
+    public GameTime gameTime;
     public Action SongStart;
     public double songTime;
-    public double songBPM;
+    public float songBPM;
     public double songElapsedTime;
     public string songName;
     public int currentBeat;
@@ -35,9 +37,9 @@ class ChartManager
         chartMetronome = new();
         musicPlayer = new();
     }
-    public void Update()
+    public void Update(GameTime gameTime)
     {
-        musicPlayer.UpdateLogic();
+        musicPlayer.UpdateLogic(gameTime);
         chartMetronome.UpdateLogic();
     }
     public void ChangeCurrentBeat(int beatToBe)
@@ -47,7 +49,7 @@ class ChartManager
     public void StartingSong(Song song, int BPM)
     {
         musicPlayer.selectedSong = song;
-        songTime = (double)(song.Duration.TotalMilliseconds);
+        songTime = song.Duration.TotalMilliseconds;
         songBPM = BPM;
         SongStart.Invoke();
     }

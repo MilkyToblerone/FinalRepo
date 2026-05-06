@@ -24,12 +24,12 @@ class MusicPlayer
     public void StartSong()
     {
         maxSongTime = ChartManager.getInstance().songTime;
-        ChartManager.getInstance().songElapsedTime = 0;
+        songElapsedTime = 0;
         MediaPlayer.Play(selectedSong);
     }
-    public void UpdateLogic()
+    public void UpdateLogic(GameTime gameTime)
     {
-        songElapsedTime = (double)(MediaPlayer.PlayPosition.TotalMilliseconds);
+        songElapsedTime += gameTime.ElapsedGameTime.Milliseconds;
         ChartManager.getInstance().songElapsedTime = songElapsedTime;
         
     }

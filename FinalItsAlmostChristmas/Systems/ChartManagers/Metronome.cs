@@ -22,15 +22,17 @@ class ChartMetronome
     }
     public void StartSong()
     {
-        // Calculate beat duration in milliseconds: 60000ms / BPM = ms per beat
         currentBeat = 0;
         songBPM = ChartManager.getInstance().songBPM;
-        beatTimeMS = 60000.0 / songBPM;
+        songTime = ChartManager.getInstance().songTime;
+        beatTimeMS = songTime / (songBPM * (songTime / 60000));
         beatTimeThreshold = beatTimeMS;
+        System.Console.WriteLine(beatTimeMS);
     }
 
     public void UpdateLogic()
     {
+        System.Console.WriteLine(beatTimeThreshold);
         if (ChartManager.getInstance().songElapsedTime >= beatTimeThreshold)
         {
             currentBeat++;
