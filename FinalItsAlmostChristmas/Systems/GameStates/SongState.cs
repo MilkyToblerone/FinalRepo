@@ -16,6 +16,7 @@ namespace FinalItsAlmostChristmas
         private bool _isCountingDown;
         private double _fadeOutTimer;
         private bool _isFadingOut;
+        private Chart chart;
 
         public SongState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
@@ -37,12 +38,17 @@ namespace FinalItsAlmostChristmas
 
         public override void LoadContent()
         {
+            chart = new Chart();
+            chart.Load();
+            chart.AddRythmBubbles();
         }
         public override void Update(GameTime gameTime)
         {
-            ChartManager.getInstance().Update(gameTime);
+            // Countdown first so the same frame "MINE!" starts the song, clock advances, then chart sees correct time.
             Countdown(gameTime);
             UpdateFadeIn(gameTime);
+            ChartManager.getInstance().Update(gameTime);
+            chart.Update(gameTime);
         }
 
         private void Countdown(GameTime gameTime)
@@ -95,7 +101,9 @@ namespace FinalItsAlmostChristmas
             // BPM
             _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
             "CurrentBeat = " + ChartManager.getInstance().currentBeat,
-            new Vector2(0,200),Color.BlueViolet);
+            new Vector2(0, 200), Color.BlueViolet);
+
+            chart.Draw(_spritebatch);
         }
 
         private void DrawStartWriting()

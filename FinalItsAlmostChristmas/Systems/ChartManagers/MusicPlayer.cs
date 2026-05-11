@@ -6,15 +6,17 @@ class MusicPlayer
 {
     double maxSongTime;
     double songElapsedTime;
+    public SongClock songClock;
     public Song selectedSong;
     public static Action SongEnd;
     public void Load()
     {
 
     }
-    public MusicPlayer()
+    public MusicPlayer(SongClock songClock)
     {
         ChartManager.getInstance().SongStart += StartSong;
+        this.songClock = songClock;
     }
     public void Initilize()
     {
@@ -23,14 +25,20 @@ class MusicPlayer
 
     public void StartSong()
     {
+
         maxSongTime = ChartManager.getInstance().songTime;
         songElapsedTime = 0;
+        ChartManager.getInstance().songElapsedTime = 0;
         MediaPlayer.Play(selectedSong);
+        ChartManager.getInstance().isSongPlaying = true;
     }
     public void UpdateLogic(GameTime gameTime)
     {
-        songElapsedTime += gameTime.ElapsedGameTime.Milliseconds;
-        ChartManager.getInstance().songElapsedTime = songElapsedTime;
+        if (ChartManager.getInstance().isSongPlaying)
+        {
+            songElapsedTime += songClock.SongClockUpdate(gameTime);
+            ChartManager.getInstance().songElapsedTime = songElapsedTime;
+        }
         
     }
 }

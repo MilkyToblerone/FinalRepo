@@ -27,17 +27,18 @@ class ChartMetronome
         songTime = ChartManager.getInstance().songTime;
         beatTimeMS = songTime / (songBPM * (songTime / 60000));
         beatTimeThreshold = beatTimeMS;
-        System.Console.WriteLine(beatTimeMS);
     }
 
     public void UpdateLogic()
     {
-        System.Console.WriteLine(beatTimeThreshold);
-        if (ChartManager.getInstance().songElapsedTime >= beatTimeThreshold)
+        if (ChartManager.getInstance().isSongPlaying)
         {
-            currentBeat++;
-            beatTimeThreshold += beatTimeMS;
-            beatChanged.Invoke(currentBeat);
+            if (ChartManager.getInstance().songElapsedTime >= beatTimeThreshold)
+            {
+                currentBeat++;
+                beatTimeThreshold += beatTimeMS;
+                beatChanged.Invoke(currentBeat);
+            }
         }
     }
 

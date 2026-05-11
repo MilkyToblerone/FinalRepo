@@ -21,6 +21,7 @@ class ChartManager
     //SINGLETON LOGIC ENDS
     public ChartMetronome chartMetronome;
     public MusicPlayer musicPlayer;
+    public SongClock songClock;
     public GameTime gameTime;
     public Action SongStart;
     public double songTime;
@@ -28,14 +29,16 @@ class ChartManager
     public double songElapsedTime;
     public string songName;
     public int currentBeat;
+    public bool isSongPlaying;
     public void Init()
     {
 
     }
     public void Load()
     {
+        songClock = new();
         chartMetronome = new();
-        musicPlayer = new();
+        musicPlayer = new(songClock);
     }
     public void Update(GameTime gameTime)
     {

@@ -39,9 +39,7 @@ namespace FinalItsAlmostChristmas
         public override void LoadContent()
         {
             nextState = new SongState(game1, _spritebatch);
-            comboFont = game1.Content.Load<SpriteFont>("Fonts/FightFont");
-            bubbleBaseTexture = game1.Content.Load<Texture2D>("Bubble");
-            bubbleCircleTexture = game1.Content.Load<Texture2D>("Circle");
+            nextState.LoadContent();
         }
 
         public override void Update(GameTime gameTime)
@@ -51,44 +49,12 @@ namespace FinalItsAlmostChristmas
                 StateManager.SwitchState(nextState);
                 
             }
-            timer += 0.1f;
             
-            for (int i = rhythmBubbles.Count - 1; i >= 0; i--)
-            {
-                
-                rhythmBubbles[i].Update();
-                if (!rhythmBubbles[i].isActive)
-                {
-                    rhythmBubbles.RemoveAt(i);
-                }
-            }
-            
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && timer > 2)
-            {
-                timer = 0;
-                SpawnRythmBubble(new Vector2(random.Next(0,600), random.Next(0,600)));
-            }
         }
 
         public override void Draw(GameTime gameTime)
         {
-            _spritebatch.DrawString(comboFont, "asdasda", new Vector2(100, 100),Color.White);
-            foreach (var bubble in rhythmBubbles)
-            {
-                bubble.Draw(_spritebatch);
-            }
         }
         
-        public void SpawnRythmBubble(Vector2 position)
-        {
-            RythmBubble newBubble = new RythmBubble(
-                bubbleBaseTexture,
-                bubbleCircleTexture,
-                position,
-                bubbleInitialScale,
-                bubbleTickDownSpeed
-            );
-            rhythmBubbles.Add(newBubble);
-        }
     }
 }
