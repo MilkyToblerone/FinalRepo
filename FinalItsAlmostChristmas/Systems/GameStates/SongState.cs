@@ -66,7 +66,7 @@ namespace FinalItsAlmostChristmas
                     startWriting = "MINE!";
                     _isFadingOut = true;
                     _fadeOutTimer = 1;
-                    ChartManager.getInstance().StartingSong(TexturesAndFonts.getInstance().badApple,130);
+                    ChartManager.getInstance().StartingSong(TexturesAndFonts.getInstance().badApple, 130);
                 }
             }
         }
