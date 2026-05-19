@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 
 class ChartManager
@@ -23,6 +24,7 @@ class ChartManager
     public MusicPlayer musicPlayer;
     public SongClock songClock;
     public GameTime gameTime;
+    public Judge judge;
     public Action SongStart;
     public double songTime;
     public float songBPM;
@@ -30,12 +32,24 @@ class ChartManager
     public string songName;
     public int currentBeat;
     public bool isSongPlaying;
+    public int score;
+    public int perfectNumber;
+    public int goodNumber;
+    public int okayNumber;
+    public int badNumber;
+    public int missNumber;
+    public Chart currentChart;
+    public double beatTimeThreshold;
     public void Init()
     {
 
     }
     public void Load()
     {
+        judge = new();
+        currentChart = new Chart();
+        currentChart.Load();
+        currentChart.AddRythmBubbles();
         songClock = new();
         chartMetronome = new();
         musicPlayer = new(songClock);
@@ -44,6 +58,12 @@ class ChartManager
     {
         musicPlayer.UpdateLogic(gameTime);
         chartMetronome.UpdateLogic();
+        currentChart.Update(gameTime);
+        judge.Update();
+    }
+    public void Draw(SpriteBatch spriteBatch)
+    {
+        currentChart.Draw(spriteBatch);
     }
     public void ChangeCurrentBeat(int beatToBe)
     {
@@ -55,6 +75,7 @@ class ChartManager
         songTime = song.Duration.TotalMilliseconds;
         songBPM = BPM;
         SongStart.Invoke();
+        Charter.AssignBeats(currentChart);
     }
 
 }

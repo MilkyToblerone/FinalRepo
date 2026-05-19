@@ -16,7 +16,6 @@ namespace FinalItsAlmostChristmas
         private bool _isCountingDown;
         private double _fadeOutTimer;
         private bool _isFadingOut;
-        private Chart chart;
 
         public SongState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
@@ -38,9 +37,7 @@ namespace FinalItsAlmostChristmas
 
         public override void LoadContent()
         {
-            chart = new Chart();
-            chart.Load();
-            chart.AddRythmBubbles();
+
         }
         public override void Update(GameTime gameTime)
         {
@@ -48,7 +45,6 @@ namespace FinalItsAlmostChristmas
             Countdown(gameTime);
             UpdateFadeIn(gameTime);
             ChartManager.getInstance().Update(gameTime);
-            chart.Update(gameTime);
         }
 
         private void Countdown(GameTime gameTime)
@@ -103,7 +99,51 @@ namespace FinalItsAlmostChristmas
             "CurrentBeat = " + ChartManager.getInstance().currentBeat,
             new Vector2(0, 200), Color.BlueViolet);
 
-            chart.Draw(_spritebatch);
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+            "Perfect = " + ChartManager.getInstance().perfectNumber,
+            new Vector2(500, 100), Color.DarkGoldenrod);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+            "Good = " + ChartManager.getInstance().goodNumber,
+            new Vector2(500, 200), Color.DarkGoldenrod);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+            "OK = " + ChartManager.getInstance().okayNumber,
+            new Vector2(500, 300), Color.DarkGoldenrod);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+            "Bad :( = " + ChartManager.getInstance().badNumber,
+            new Vector2(500, 400), Color.DarkGoldenrod);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+            "miss = " + ChartManager.getInstance().missNumber,
+            new Vector2(500, 0), Color.DarkGoldenrod);
+
+            
+
+            
+
+            // Current RythmBubbles Beat Number
+            if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Count != 0)
+            {
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+                "Current RythmBubbles Beat No  = " + ChartManager.getInstance().currentChart.allOfTheRythmBubbles[0].beatItisOn,
+                new Vector2(0, 400), Color.DarkRed);
+
+            }
+            else
+            {
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
+                "Current RythmBubbles Beat No  = NO MORE ITS FINISHED",
+                new Vector2(0, 400), Color.DarkRed);
+            }
+            
+
+
+
+
+            ChartManager.getInstance().Draw(_spritebatch);
+
         }
 
         private void DrawStartWriting()

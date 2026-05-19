@@ -41,7 +41,7 @@ sealed class InputSystems
         if (keyboardState.IsKeyDown(Keys.Escape)) Decline?.Invoke();
 
 
-        // THIS MAKES SURE SO IT DOESNT FIRE OFF AT EVERY FUCKING FRAME
+        // THIS MAKES SURE SO IT DOESNT FIRE OFF AT EVERY FRAME
         if (keyboardState.IsKeyDown(Keys.G) && !rythButtonPressedBoolPick) { RythmButtonPressed?.Invoke(ToolTypes.Pickaxe); rythButtonPressedBoolPick = true; }
         if (keyboardState.IsKeyDown(Keys.H) && !rythButtonPressedBoolAxe) {RythmButtonPressed?.Invoke(ToolTypes.Axe); rythButtonPressedBoolAxe = true; }
         if (keyboardState.IsKeyDown(Keys.J) && !rythButtonPressedBoolShovel) { RythmButtonPressed?.Invoke(ToolTypes.Shovel); rythButtonPressedBoolShovel = true; }

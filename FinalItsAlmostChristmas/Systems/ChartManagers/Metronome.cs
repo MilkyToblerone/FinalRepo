@@ -8,7 +8,7 @@ class ChartMetronome
     double songTime;
     public double beatTimeMS;
     public int currentBeat;
-    double beatTimeThreshold;
+    public double beatTimeThreshold;
 
     public ChartMetronome()
     {
@@ -27,6 +27,7 @@ class ChartMetronome
         songTime = ChartManager.getInstance().songTime;
         beatTimeMS = songTime / (songBPM * (songTime / 60000));
         beatTimeThreshold = beatTimeMS;
+        ChartManager.getInstance().beatTimeThreshold = beatTimeThreshold;
     }
 
     public void UpdateLogic()

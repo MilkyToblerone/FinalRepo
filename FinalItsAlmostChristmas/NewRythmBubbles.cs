@@ -7,10 +7,9 @@ class NewRythmBubbles
 {
     ScaleableSprite bubbleTexture;
     ScaleableSprite outerBubbleTexture;
-    double chartTime;
-    double timeToClose;
-    ToolTypes toolType;
-    Random random; //DELETE THIS THIS IS A TEST
+    public double chartTime { get; private set; }
+    public double timeToClose { get; private set; }
+    public ToolTypes toolType;
 
     public bool isActive { get; private set; }
 
@@ -19,22 +18,37 @@ class NewRythmBubbles
     double timer;
     readonly float _initialOuterScale;
     bool _ringStarted;
+    public int beatItisOn;
 
+    public NewRythmBubbles(double chartTime, double timeToClose, ToolTypes toolType, Vector2 pos)
+    {
+        this.chartTime = chartTime;
+        this.timeToClose = timeToClose;
+        this.toolType = toolType;
+
+        var game = TexturesAndFonts.getInstance().game1;
+        var baseTex = game.Content.Load<Texture2D>("Bubble");
+        var circleTex = game.Content.Load<Texture2D>("Circle");
+
+        const float initialScale = 0.05f;
+        bubbleTexture = new ScaleableSprite(baseTex, pos, initialScale);
+        _initialOuterScale = initialScale * 2f;
+        outerBubbleTexture = new ScaleableSprite(circleTex, pos, _initialOuterScale);
+    }
     public NewRythmBubbles(double chartTime, double timeToClose, ToolTypes toolType)
     {
         this.chartTime = chartTime;
         this.timeToClose = timeToClose;
         this.toolType = toolType;
-        random = new(); //DELETE THIS THIS IS A TEST
 
         var game = TexturesAndFonts.getInstance().game1;
         var baseTex = game.Content.Load<Texture2D>("Bubble");
         var circleTex = game.Content.Load<Texture2D>("Circle");
-        var pos = new Vector2(random.Next(200, 500), 300);
+        var pos = new Vector2(200, 300);
         
         const float initialScale = 0.05f;
         bubbleTexture = new ScaleableSprite(baseTex, pos, initialScale);
-        _initialOuterScale = initialScale * 1.5f; 
+        _initialOuterScale = initialScale * 2f; 
         outerBubbleTexture = new ScaleableSprite(circleTex, pos, _initialOuterScale);
     }
     public void Update(GameTime gameTime)
@@ -60,6 +74,7 @@ class NewRythmBubbles
         {
             isActive = false;
             IsExpired = true;
+            ChartManager.getInstance().missNumber++;
         }
     }
     
