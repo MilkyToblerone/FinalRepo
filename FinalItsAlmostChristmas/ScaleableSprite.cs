@@ -22,4 +22,13 @@ class ScaleableSprite : Sprite
             spriteBatch.Draw(spriteTexture, texturePos, sourceRect, Color.White, 0, origin, scale, SpriteEffects.None, 0);
         }
     }
+
+    public void Draw(SpriteBatch spriteBatch,float scale)
+    {
+        if (spriteTexture != null)
+        {
+            Vector2 origin = new Vector2(spriteTexture.Width / 2f, spriteTexture.Height / 2f);
+            spriteBatch.Draw(spriteTexture, texturePos, sourceRect, Color.White, 0, origin, scale, SpriteEffects.None, 0);
+        }
+    }
 }

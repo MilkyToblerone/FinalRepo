@@ -15,6 +15,9 @@ class TexturesAndFonts
     public Texture2D bubbleCircleTexture;
     public Texture2D mainMenuBG;
     public Texture2D songSelectBG;
+    public Texture2D badAppleCover;
+    public Texture2D bookendCover;
+    public SoundEffect selectSFX;
     
     public bool isActive { get; private set; }
 
@@ -45,6 +48,9 @@ class TexturesAndFonts
         clickSFX = game1.Content.Load<SoundEffect>("MetalClick");
         blissBoutique = game1.Content.Load<Song>("BlissBoutique");
         mainMenuBG = game1.Content.Load<Texture2D>("Mine_MainMenu");
-        songSelectBG = game1.Content.Load<Texture2D>("dirtBGPlaceholder");
+        songSelectBG = game1.Content.Load<Texture2D>("SongSelect_BG");
+        bookendCover = game1.Content.Load<Texture2D>("bookendsongcover");
+        badAppleCover = game1.Content.Load<Texture2D>("badappleSongCover");
+        selectSFX = game1.Content.Load<SoundEffect>("Select");
     }
 }

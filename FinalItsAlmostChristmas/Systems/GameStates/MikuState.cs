@@ -88,7 +88,7 @@ namespace FinalItsAlmostChristmas
         {
             songSelectBG.Draw(_spritebatch,songSelectPos);
             menuBG.Draw(_spritebatch,menuBGPos);
-            mainMenuButtonManager.Draw(_spritebatch);
+            if (mainMenuButtonManager.isBeingUsed) mainMenuButtonManager.Draw(_spritebatch);
         }
         void SwitchStart(GameTime gameTime)
         {

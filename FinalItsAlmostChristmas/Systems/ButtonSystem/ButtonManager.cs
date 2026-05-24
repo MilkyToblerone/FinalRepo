@@ -30,6 +30,7 @@ class ButtonManager
 
     private void PressButton()
     {
+        if (!isBeingUsed) return;
         buttons[hoveredButtonIndex].Press();
     }
 

@@ -34,6 +34,8 @@ sealed class InputSystems
     bool rythButtonPressedBoolPick;
     bool rythButtonPressedBoolShovel;
     bool rythButtonPressedBoolAxe;
+    bool confirmPressed;
+    bool declinePressed;
     public void CheckInputs()
     {
         KeyboardState keyboardState = Keyboard.GetState();
@@ -41,7 +43,7 @@ sealed class InputSystems
         if (keyboardState.IsKeyDown(Keys.D) || keyboardState.IsKeyDown(Keys.Right)) { if (!directionRightPressed) { RightPressed?.Invoke(); directionRightPressed = true; } }
         if (keyboardState.IsKeyDown(Keys.A) || keyboardState.IsKeyDown(Keys.Left)) { if (!directionLeftPressed) { LeftPressed?.Invoke(); directionLeftPressed = true; } }
         if (keyboardState.IsKeyDown(Keys.S) || keyboardState.IsKeyDown(Keys.Down)) { if (!directionDownPressed) { DownPressed?.Invoke(); directionDownPressed = true; } }
-        if (keyboardState.IsKeyDown(Keys.Enter)) Confirm?.Invoke();
+        if (keyboardState.IsKeyDown(Keys.Enter)) { if (!confirmPressed) { Confirm?.Invoke(); confirmPressed = true; } }
         if (keyboardState.IsKeyDown(Keys.Escape)) Decline?.Invoke();
 
         // THIS MAKES SURE SO IT DOESNT FIRE OFF AT EVERY FRAME
@@ -49,6 +51,7 @@ sealed class InputSystems
         if (keyboardState.IsKeyUp(Keys.D) && keyboardState.IsKeyUp(Keys.Right)) directionRightPressed = false;
         if (keyboardState.IsKeyUp(Keys.A) && keyboardState.IsKeyUp(Keys.Left)) directionLeftPressed = false;
         if (keyboardState.IsKeyUp(Keys.S) && keyboardState.IsKeyUp(Keys.Down)) directionDownPressed = false;
+        if (keyboardState.IsKeyUp(Keys.Enter)) confirmPressed = false;
 
         // THIS MAKES SURE SO IT DOESNT FIRE OFF AT EVERY FRAME
         if (keyboardState.IsKeyDown(Keys.G) && !rythButtonPressedBoolPick) { RythmButtonPressed?.Invoke(ToolTypes.Pickaxe); rythButtonPressedBoolPick = true; }

@@ -20,7 +20,7 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 1920;
         _graphics.PreferredBackBufferHeight = 1080;
         IsMouseVisible = false;
-        _graphics.IsFullScreen = true;
+        _graphics.IsFullScreen = false;
     }
 
     protected override void Initialize()
@@ -41,7 +41,7 @@ public class Game1 : Game
         mikuState = new MikuState(this,_spriteBatch,tetoState);
         mikuState.LoadContent();
         tetoState.LoadContent();
-
+        tetoState.mainMenuScene = mikuState;
         StateManager.Initialize(mikuState);
         
     }

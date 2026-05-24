@@ -18,7 +18,7 @@ public class Button
     private float wobbleAmount = 5f;
     private float wobbleOffset;
     private float hoverScale = 1.2f;
-    private float currentScale;
+    public float currentScale { get; private set; }
     private static Random random = new Random();
     public bool isActive = true;
 
@@ -32,7 +32,7 @@ public class Button
         hoverColor = Color.Yellow;
         wobbleTimer = 0f;
         wobbleOffset = (float)random.NextDouble() * MathHelper.TwoPi;
-        currentScale = 3f;
+        currentScale = 1f;
     }
 
     public void Update(GameTime gameTime)
@@ -58,6 +58,7 @@ public class Button
     public void Press()
     {
         if (!isActive) return;
+        TexturesAndFonts.getInstance().selectSFX.Play();
         OnPressed?.Invoke();
     }
 }

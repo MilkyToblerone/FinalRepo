@@ -14,7 +14,7 @@ class Chart
     public void AddRythmBubbles()
     {
         allOfTheRythmBubbles.Add(new NewRythmBubbles(1, 1300, ToolTypes.Pickaxe));
-        allOfTheRythmBubbles.Add(new NewRythmBubbles(1600, 5000, ToolTypes.Pickaxe));
+        allOfTheRythmBubbles.Add(new NewRythmBubbles(1600, 1000, ToolTypes.Pickaxe));
         allOfTheRythmBubbles.Add(new NewRythmBubbles(2000, 5000, ToolTypes.Pickaxe));
     }
 
