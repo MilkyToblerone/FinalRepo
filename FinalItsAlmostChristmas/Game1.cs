@@ -17,18 +17,23 @@ public class Game1 : Game
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
-        IsMouseVisible = true;
+        _graphics.PreferredBackBufferWidth = 1920;
+        _graphics.PreferredBackBufferHeight = 1080;
+        IsMouseVisible = false;
+        _graphics.IsFullScreen = true;
     }
 
     protected override void Initialize()
     {
         // TODO: Add your initialization logic here
+        
         TexturesAndFonts.getInstance().game1 = this;
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
+        
         TexturesAndFonts.getInstance().Load();
         ChartManager.getInstance().Load();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -46,7 +51,6 @@ public class Game1 : Game
         // TODO: Add your update logic here
 
         InputSystems.getInstance().CheckInputs();
-        
         StateManager.GetCurrentState().Update(gameTime);
         base.Update(gameTime);
     }

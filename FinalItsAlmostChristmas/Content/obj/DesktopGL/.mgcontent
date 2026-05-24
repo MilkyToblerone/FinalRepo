@@ -5,15 +5,23 @@
   <Config />
   <SourceFiles>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BadApple.mp3</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BlissBoutique.mp3</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BR_Miku.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Bubble.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Circle.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/dirtBGPlaceholder.jpg</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/fatass.jpg</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Fonts/FightFont.spritefont</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/MetalClick.wav</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Mine_MainMenu.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/pissmiku.jpg</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/UNBEATABLE OST - BOOKEND  -opening version-.mp3</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

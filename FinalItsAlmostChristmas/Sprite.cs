@@ -28,4 +28,9 @@ public class Sprite
         if (spriteTexture != null)
             spriteBatch.Draw(spriteTexture, texturePos, Color.White);
     }
+        public virtual void Draw(SpriteBatch spriteBatch,Vector2 vector2)
+    {
+        if (spriteTexture != null)
+            spriteBatch.Draw(spriteTexture, vector2, Color.White);
+    }
 }

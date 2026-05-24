@@ -64,10 +64,13 @@ class NewRythmBubbles
                 return;
             _ringStarted = true;
             isActive = true;
-            timer = 0;
+            timer = songMs - chartTime;  // Account for any overshoot
+        }
+        else
+        {
+            timer += gameTime.ElapsedGameTime.TotalMilliseconds;
         }
 
-        timer += gameTime.ElapsedGameTime.TotalMilliseconds;
         float progress = MathHelper.Clamp((float)(timer / timeToClose), 0f, 1f);
         outerBubbleTexture.scale = MathHelper.Lerp(_initialOuterScale, 0f, progress);
         if (outerBubbleTexture.scale <= 0f || progress >= 1f)

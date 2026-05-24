@@ -1,0 +1,5 @@
+enum ButtonTypes
+{
+    LeftToRight,
+    TopToBottom
+}

@@ -15,4 +15,4 @@ class Charter
             item.beatItisOn = beatToAssign;
         }
     }
-}
+} 

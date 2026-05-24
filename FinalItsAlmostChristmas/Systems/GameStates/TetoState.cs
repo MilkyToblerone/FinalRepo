@@ -10,22 +10,11 @@ namespace FinalItsAlmostChristmas
 {
     public class TetoState : GameState
     {
-        private Texture2D bubbleBaseTexture;
-        private Texture2D bubbleCircleTexture;
-        private SpriteFont comboFont;
-        Random random = new();
-        float timer =0;
-        
-        private List<RythmBubble> rhythmBubbles;
-        private float bubbleTickDownSpeed = 0.0005f;
-        private float bubbleInitialScale = 0.05f;
-
         
         public GameState nextState;
         
         public TetoState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
-            rhythmBubbles = new List<RythmBubble>();
         }
 
         public override void OnEnter()

@@ -23,6 +23,8 @@ namespace FinalItsAlmostChristmas
 
         public override void OnEnter()
         {
+            MediaPlayer.IsRepeating = false;
+            MediaPlayer.Stop();
             _countdownTimer = 3.0;
             _isCountingDown = true;
             _isFadingOut = false;

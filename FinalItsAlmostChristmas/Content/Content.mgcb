@@ -19,6 +19,12 @@
 /processorParam:Quality=Best
 /build:BadApple.mp3
 
+#begin BlissBoutique.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:BlissBoutique.mp3
+
 #begin BR_Miku.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -55,6 +61,18 @@
 /processorParam:TextureFormat=Color
 /build:Circle.png
 
+#begin dirtBGPlaceholder.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:dirtBGPlaceholder.jpg
+
 #begin fatass.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -73,6 +91,24 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/FightFont.spritefont
+
+#begin MetalClick.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:MetalClick.wav
+
+#begin Mine_MainMenu.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Mine_MainMenu.png
 
 #begin pissmiku.jpg
 /importer:TextureImporter
