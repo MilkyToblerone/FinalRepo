@@ -4,10 +4,7 @@ using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-/// <summary>
-/// Records rhythm bubbles during gameplay and exports them as JSON.
-/// Enable by setting ChartMaker.getInstance().IsRecording = true;
-/// </summary>
+
 class ChartMaker
 {
     static ChartMaker instance;
@@ -36,10 +33,8 @@ class ChartMaker
 
     public void Initialize()
     {
-        // Subscribe to input events when recording is enabled
         InputSystems.getInstance().RythmButtonPressed += OnRythmButtonPressed;
 
-        // Create output directory if it doesn't exist
         if (!Directory.Exists(outputPath))
         {
             Directory.CreateDirectory(outputPath);
@@ -61,9 +56,6 @@ class ChartMaker
         System.Console.WriteLine($"[ChartMaker] Recorded: {toolType} at {currentTime:F0}ms");
     }
 
-    /// <summary>
-    /// Start recording chart data
-    /// </summary>
     public void StartRecording()
     {
         IsRecording = true;
@@ -71,23 +63,17 @@ class ChartMaker
         System.Console.WriteLine("[ChartMaker] Recording started");
     }
 
-    /// <summary>
-    /// Stop recording and export to JSON
-    /// </summary>
     public void StopAndExport(string chartName = "NewChart")
     {
         IsRecording = false;
         ExportToJson(chartName);
     }
 
-    /// <summary>
-    /// Export recorded bubbles to JSON file and print to console
-    /// </summary>
     private void ExportToJson(string chartName)
     {
         try
         {
-            // Create chart class code
+
             string chartCode = GenerateChartCode(chartName);
 
             // Save to file
@@ -104,9 +90,6 @@ class ChartMaker
         }
     }
 
-    /// <summary>
-    /// Generate C# chart class code from recorded bubbles
-    /// </summary>
     private string GenerateChartCode(string chartName)
     {
         string className = ToPascalCase(chartName) + "Chart";
@@ -133,9 +116,6 @@ class ChartMaker
         return code.ToString();
     }
 
-    /// <summary>
-    /// Convert string to PascalCase
-    /// </summary>
     private string ToPascalCase(string str)
     {
         if (string.IsNullOrEmpty(str)) return str;
@@ -156,17 +136,11 @@ class ChartMaker
         return result.ToString();
     }
 
-    /// <summary>
-    /// Get the count of recorded bubbles
-    /// </summary>
     public int GetRecordedCount()
     {
         return recordedBubbles.Count;
     }
 
-    /// <summary>
-    /// Clear all recorded data
-    /// </summary>
     public void Clear()
     {
         recordedBubbles.Clear();
@@ -174,9 +148,7 @@ class ChartMaker
     }
 }
 
-/// <summary>
-/// Represents a single recorded rhythm bubble
-/// </summary>
+
 [Serializable]
 class BubbleRecord
 {

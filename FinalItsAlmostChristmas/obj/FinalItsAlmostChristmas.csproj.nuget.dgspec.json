@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {}
+    "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {}
   },
   "projects": {
-    "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {
+    "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
+        "projectUniqueName": "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
         "projectName": "FinalItsAlmostChristmas",
-        "projectPath": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
+        "projectPath": "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
         "packagesPath": "C:\\Users\\doguh\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\obj\\",
+        "outputPath": "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\doguh\\AppData\\Roaming\\NuGet\\NuGet.Config",

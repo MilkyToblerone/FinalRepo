@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BR_Miku.png</SourceFile>
+  <SourceFile>C:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BR_Miku.png</SourceFile>
   <SourceTime>2026-04-25T13:41:55.2349333+03:00</SourceTime>
-  <DestFile>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/bin/DesktopGL/Content/BR_Miku.xnb</DestFile>
-  <DestTime>2026-05-25T19:09:40.1540158+03:00</DestTime>
+  <DestFile>C:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/bin/DesktopGL/Content/BR_Miku.xnb</DestFile>
+  <DestTime>2026-05-28T01:37:46.7249193+03:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2025-10-20T17:25:32+03:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
