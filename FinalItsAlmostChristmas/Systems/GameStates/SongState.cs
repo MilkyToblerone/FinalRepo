@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using FinalItsAlmostChristmas;
@@ -11,18 +12,25 @@ namespace FinalItsAlmostChristmas
     public class SongState : GameState
     {
         string startWriting;
-        List<string> writingList;
         private double _countdownTimer;
         private bool _isCountingDown;
         private double _fadeOutTimer;
         private bool _isFadingOut;
+        ScaleableSprite sideWallLeft;
+        ScaleableSprite sideWallRight;
+        ScaleableSprite reactionPic;
+
+        GameState resultState;
 
         public SongState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
+            resultState = new ResultState(game1, spriteBatch);
+            ChartManager.getInstance().resultScene = resultState;
         }
 
         public override void OnEnter()
         {
+            ChartManager.getInstance().Reset();
             MediaPlayer.IsRepeating = false;
             MediaPlayer.Stop();
             _countdownTimer = 3.0;
@@ -30,8 +38,6 @@ namespace FinalItsAlmostChristmas
             _isFadingOut = false;
             _fadeOutTimer = 0.0;
             startWriting = "3";
-            writingList = new();
-            writingList.Add(startWriting);
         }
         public override void OnExit()
         {
@@ -39,14 +45,42 @@ namespace FinalItsAlmostChristmas
 
         public override void LoadContent()
         {
-
+            sideWallLeft = new(TexturesAndFonts.getInstance().sideWallTexture, new Vector2(1390, 540), 1f);
+            sideWallRight = new(TexturesAndFonts.getInstance().sideWallTexture, new Vector2(530, 540), 1f);
+            reactionPic = new(new Vector2(250, 250), 0.2f);
         }
         public override void Update(GameTime gameTime)
         {
-            // Countdown first so the same frame "MINE!" starts the song, clock advances, then chart sees correct time.
             Countdown(gameTime);
             UpdateFadeIn(gameTime);
             ChartManager.getInstance().Update(gameTime);
+            ManageReactionTexture();
+            if (Keyboard.GetState().IsKeyDown(Keys.Tab))
+            {
+                StateManager.SwitchState(resultState);
+            }
+        }
+
+        private void ManageReactionTexture()
+        {
+            switch (ChartManager.getInstance().reactionStatus)
+            {
+                case ReactionStatus.Perfect:
+                    reactionPic.spriteTexture = TexturesAndFonts.getInstance().perfectReactionTexture;
+                    break;
+                case ReactionStatus.Good:
+                    reactionPic.spriteTexture = TexturesAndFonts.getInstance().goodReactionTexture;
+                    break;
+                case ReactionStatus.Okay:
+                    reactionPic.spriteTexture = TexturesAndFonts.getInstance().okayReactionTexture;
+                    break;
+                case ReactionStatus.Bad:
+                    reactionPic.spriteTexture = TexturesAndFonts.getInstance().badReactionTexture;
+                    break;
+                case ReactionStatus.Miss:
+                    reactionPic.spriteTexture = TexturesAndFonts.getInstance().missReactionTexture;
+                    break;
+            }
         }
 
         private void Countdown(GameTime gameTime)
@@ -68,7 +102,8 @@ namespace FinalItsAlmostChristmas
                     startWriting = "MINE!";
                     _isFadingOut = true;
                     _fadeOutTimer = 1;
-                    ChartManager.getInstance().StartingSong(TexturesAndFonts.getInstance().badApple, 130);
+                    ChartManager.getInstance().StartingSong(ChartManager.getInstance().currentChart);
+                    // ChartManager.getInstance().chartMaker.StartRecording();
                 }
             }
         }
@@ -90,62 +125,10 @@ namespace FinalItsAlmostChristmas
         public override void Draw(GameTime gameTime)
         {
             DrawStartWriting();
-
-            // elapsed time
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            ChartManager.getInstance().songElapsedTime + " / " + ChartManager.getInstance().songTime
-            , Vector2.Zero, Color.Black);
-
-            // BPM
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "CurrentBeat = " + ChartManager.getInstance().currentBeat,
-            new Vector2(0, 200), Color.BlueViolet);
-
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "Perfect = " + ChartManager.getInstance().perfectNumber,
-            new Vector2(500, 100), Color.DarkGoldenrod);
-
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "Good = " + ChartManager.getInstance().goodNumber,
-            new Vector2(500, 200), Color.DarkGoldenrod);
-
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "OK = " + ChartManager.getInstance().okayNumber,
-            new Vector2(500, 300), Color.DarkGoldenrod);
-
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "Bad :( = " + ChartManager.getInstance().badNumber,
-            new Vector2(500, 400), Color.DarkGoldenrod);
-
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-            "miss = " + ChartManager.getInstance().missNumber,
-            new Vector2(500, 0), Color.DarkGoldenrod);
-
-            
-
-            
-
-            // Current RythmBubbles Beat Number
-            if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Count != 0)
-            {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-                "Current RythmBubbles Beat No  = " + ChartManager.getInstance().currentChart.allOfTheRythmBubbles[0].beatItisOn,
-                new Vector2(0, 400), Color.DarkRed);
-
-            }
-            else
-            {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-                "Current RythmBubbles Beat No  = NO MORE ITS FINISHED",
-                new Vector2(0, 400), Color.DarkRed);
-            }
-            
-
-
-
-
+            sideWallLeft.Draw(_spritebatch, 0.01f, 1.5f);
+            sideWallRight.Draw(_spritebatch, 0.01f, 1.5f, SpriteEffects.FlipHorizontally);
+            reactionPic.Draw(_spritebatch, 0.2f, 0.4f);
             ChartManager.getInstance().Draw(_spritebatch);
-
         }
 
         private void DrawStartWriting()

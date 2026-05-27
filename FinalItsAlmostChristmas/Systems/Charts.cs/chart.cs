@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
-class Chart
+abstract class Chart
 {
     public string chartName;
+    public Song chartSong;
+    public int chartBPM;
     public List<NewRythmBubbles> allOfTheRythmBubbles;
 
     public void Load()
     {
         allOfTheRythmBubbles = new();
+        AddRythmBubbles();
     }
-    public void AddRythmBubbles()
-    {
-        allOfTheRythmBubbles.Add(new NewRythmBubbles(1, 1300, ToolTypes.Pickaxe));
-        allOfTheRythmBubbles.Add(new NewRythmBubbles(1600, 1000, ToolTypes.Pickaxe));
-        allOfTheRythmBubbles.Add(new NewRythmBubbles(2000, 5000, ToolTypes.Pickaxe));
-    }
+
+    protected abstract void AddRythmBubbles();
 
     public void Update(GameTime gameTime)
     {

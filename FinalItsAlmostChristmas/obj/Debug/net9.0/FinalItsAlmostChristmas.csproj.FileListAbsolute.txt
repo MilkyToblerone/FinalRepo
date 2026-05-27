@@ -90,3 +90,14 @@ c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\badappleSongCover.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\bookendsongcover.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Select.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\brokenObsPlaceholder.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\DirtObs.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\RockObs.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\WoodObs.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Side_Wall.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Bad_Face.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Good_Face.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Miss_Face.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Okay_Face.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Perfect_Face.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\ResultScreen.xnb

@@ -3,10 +3,10 @@ using System;
 class Judge
 {
     NewRythmBubbles currentRythmBubble;
-    double perfectOffset = 2000;
-    double goodOffset = 100;
-    double okayOffset = 150;
-    double badOffset = 200;
+    double perfectOffset = 50;
+    double goodOffset = 80;
+    double okayOffset = 90;
+    double badOffset = 100;
     public Judge()
     {
         InputSystems.getInstance().RythmButtonPressed += CheckAccuracy;
@@ -29,42 +29,46 @@ class Judge
         if ((timeWhenButtonPressed < perfectTime - badOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
         {
             ChartManager.getInstance().missNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble);
-            System.Console.WriteLine("ahmet");
+            ChartManager.getInstance().Miss?.Invoke(); 
+            currentRythmBubble.IsExpired = true;
         }
 
 
-        else if ((timeWhenButtonPressed > perfectTime - perfectOffset || timeWhenButtonPressed < perfectTime + perfectOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
+        else if (((timeWhenButtonPressed > perfectTime - perfectOffset) && (timeWhenButtonPressed < perfectTime + perfectOffset)) && (toolType == currentRythmBubble.toolType))
         {
             ChartManager.getInstance().perfectNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble);
+            ChartManager.getInstance().Perfect?.Invoke(); 
+            currentRythmBubble.IsExpired = true;
         }
 
 
-        else if ((timeWhenButtonPressed > perfectTime - goodOffset || timeWhenButtonPressed < perfectTime + goodOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
+        else if ((timeWhenButtonPressed > perfectTime - goodOffset && timeWhenButtonPressed < perfectTime + goodOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
         {
             ChartManager.getInstance().goodNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble);
+            ChartManager.getInstance().Good?.Invoke(); 
+            currentRythmBubble.IsExpired = true;
         }
 
 
-        else if ((timeWhenButtonPressed > perfectTime - okayOffset || timeWhenButtonPressed < perfectTime + okayOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
+        else if ((timeWhenButtonPressed > perfectTime - okayOffset && timeWhenButtonPressed < perfectTime + okayOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
         {
             ChartManager.getInstance().okayNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble);
+            ChartManager.getInstance().Okay?.Invoke(); 
+            currentRythmBubble.IsExpired = true;
         }
 
 
-        else if ((timeWhenButtonPressed > perfectTime - badOffset || timeWhenButtonPressed < perfectTime + badOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
+        else if ((timeWhenButtonPressed > perfectTime - badOffset && timeWhenButtonPressed < perfectTime + badOffset) && (toolType == currentRythmBubble.toolType) && (beatWhenButtonPressed == currentRythmBubble.beatItisOn))
         {
             ChartManager.getInstance().badNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble);
+            ChartManager.getInstance().Bad?.Invoke(); 
+            currentRythmBubble.IsExpired = true; 
         }
         else
         {
             ChartManager.getInstance().missNumber++;
-            ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Remove(currentRythmBubble); 
-            System.Console.WriteLine("1111t");
+            ChartManager.getInstance().Miss?.Invoke(); 
+            currentRythmBubble.IsExpired = true;
         }
     }
 }

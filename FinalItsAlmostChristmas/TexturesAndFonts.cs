@@ -18,11 +18,20 @@ class TexturesAndFonts
     public Texture2D badAppleCover;
     public Texture2D bookendCover;
     public SoundEffect selectSFX;
-    
-    public bool isActive { get; private set; }
+    public Texture2D dirtTexture;
+    public Texture2D woodTexture;
+    public Texture2D stoneTexture;
+
+    public Texture2D brokenTexture;
+    public Texture2D sideWallTexture;
+    public Texture2D perfectReactionTexture;
+    public Texture2D goodReactionTexture;
+    public Texture2D okayReactionTexture;
+    public Texture2D badReactionTexture;
+    public Texture2D missReactionTexture;
+    public Texture2D resultScreen;
 
     public SpriteFont fightFont;
-    public SpriteFont fightFontLarge;
 
     static TexturesAndFonts instance;
 
@@ -52,5 +61,17 @@ class TexturesAndFonts
         bookendCover = game1.Content.Load<Texture2D>("bookendsongcover");
         badAppleCover = game1.Content.Load<Texture2D>("badappleSongCover");
         selectSFX = game1.Content.Load<SoundEffect>("Select");
+        dirtTexture = game1.Content.Load<Texture2D>("DirtObs");
+        stoneTexture = game1.Content.Load<Texture2D>("RockObs");
+        woodTexture = game1.Content.Load<Texture2D>("WoodObs");
+        brokenTexture = game1.Content.Load<Texture2D>("brokenObsPlaceholder");
+        sideWallTexture = game1.Content.Load<Texture2D>("Side_Wall");
+
+        perfectReactionTexture = game1.Content.Load<Texture2D>("Reactions/Perfect_Face");
+        goodReactionTexture = game1.Content.Load<Texture2D>("Reactions/Good_Face");
+        okayReactionTexture = game1.Content.Load<Texture2D>("Reactions/Okay_Face");
+        badReactionTexture = game1.Content.Load<Texture2D>("Reactions/Bad_Face");
+        missReactionTexture = game1.Content.Load<Texture2D>("Reactions/Miss_Face");
+        resultScreen = game1.Content.Load<Texture2D>("ResultScreen");
     }
 }

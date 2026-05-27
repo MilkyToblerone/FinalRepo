@@ -25,7 +25,6 @@ class MusicPlayer
 
     public void StartSong()
     {
-
         maxSongTime = ChartManager.getInstance().songTime;
         songElapsedTime = 0;
         ChartManager.getInstance().songElapsedTime = 0;
@@ -38,6 +37,11 @@ class MusicPlayer
         {
             songElapsedTime += songClock.SongClockUpdate(gameTime);
             ChartManager.getInstance().songElapsedTime = songElapsedTime;
+
+            if (songElapsedTime >= maxSongTime)
+            {
+                SongEnd?.Invoke();
+            }
         }
         
     }

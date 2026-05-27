@@ -38,7 +38,8 @@ namespace FinalItsAlmostChristmas
             songStateButtonManager.buttons.Add(badAppleButon);
             songStateButtonManager.buttons.Add(bookendSongButton);
 
-            badAppleButon.OnPressed += SwitchoverToBadApple; 
+            badAppleButon.OnPressed += SwitchoverToBadApple;
+            bookendSongButton.OnPressed += SwitchoverToBookendSong; 
         }
 
         public override void OnEnter()
@@ -48,13 +49,13 @@ namespace FinalItsAlmostChristmas
         
         public override void OnExit()
         {
+            songStateButtonManager.isBeingUsed = false;
         }
 
         public override void LoadContent()
         {
             songSelectBG = new(TexturesAndFonts.getInstance().songSelectBG,songSelectBGPos);
-            nextState = new SongState(game1, _spritebatch);
-            nextState.LoadContent();
+            songState.LoadContent();
         }
 
         public override void Update(GameTime gameTime)
@@ -72,6 +73,12 @@ namespace FinalItsAlmostChristmas
         }
         void SwitchoverToBadApple()
         {
+            ChartManager.getInstance().SetChart(ChartManager.getInstance().badAppleChart);
+            StateManager.SwitchState(songState);
+        }
+        void SwitchoverToBookendSong()
+        {
+            ChartManager.getInstance().SetChart(ChartManager.getInstance().bookendChart);
             StateManager.SwitchState(songState);
         }
         

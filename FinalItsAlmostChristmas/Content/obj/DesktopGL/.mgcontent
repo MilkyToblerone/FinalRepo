@@ -9,17 +9,28 @@
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BlissBoutique.mp3</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/bookendsongcover.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/BR_Miku.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/brokenObsPlaceholder.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Bubble.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Circle.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/dirtBGPlaceholder.jpg</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/DirtObs.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/fatass.jpg</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Fonts/FightFont.spritefont</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/MetalClick.wav</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Mine_MainMenu.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/pissmiku.jpg</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Reactions/Bad_Face.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Reactions/Good_Face.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Reactions/Miss_Face.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Reactions/Okay_Face.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Reactions/Perfect_Face.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/ResultScreen.png</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/RockObs.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Select.wav</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/Side_Wall.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/SongSelect_BG.png</File>
     <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/UNBEATABLE OST - BOOKEND  -opening version-.mp3</File>
+    <File>c:/Users/doguh/Desktop/GP2Files/FinalItsAlmostChristmas/FinalRepo/FinalItsAlmostChristmas/Content/WoodObs.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
@@ -37,6 +48,17 @@
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File>BookendOpening.mp3</File>
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

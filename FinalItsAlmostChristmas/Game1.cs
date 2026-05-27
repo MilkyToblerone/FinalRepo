@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
+
 
 namespace FinalItsAlmostChristmas;
 
@@ -57,9 +56,8 @@ public class Game1 : Game
 
     protected override void Draw(GameTime gameTime)
     {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        _spriteBatch.Begin();
+        GraphicsDevice.Clear(new Color(15, 9, 9));
+        _spriteBatch.Begin(SpriteSortMode.FrontToBack);
         StateManager.GetCurrentState().Draw(gameTime);
         base.Draw(gameTime);
         _spriteBatch.End();
