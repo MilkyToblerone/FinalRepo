@@ -40,6 +40,7 @@ namespace FinalItsAlmostChristmas
 
             badAppleButon.OnPressed += SwitchoverToBadApple;
             bookendSongButton.OnPressed += SwitchoverToBookendSong; 
+            ResultState.songState = songState;
         }
 
         public override void OnEnter()

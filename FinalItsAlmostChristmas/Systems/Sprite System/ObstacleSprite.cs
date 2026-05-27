@@ -67,7 +67,7 @@ class ObstacleSprite
         }
         else if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) != assigendRythmBubble.orderNumber && !inFront)
         {
-            color = Color.DarkGray;
+            color = new Color(50,50,50);
             inFront = false;
             layerNumber = 0.2f;
         }

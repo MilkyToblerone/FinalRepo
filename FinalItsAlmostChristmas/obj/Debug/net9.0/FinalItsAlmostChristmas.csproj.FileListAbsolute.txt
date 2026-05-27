@@ -101,3 +101,10 @@ c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Okay_Face.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Reactions\Perfect_Face.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\ResultScreen.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Fonts\FightFontSmall.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\Tier_A.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\Tier_B.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\Tier_C.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\Tier_F.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\Tier_S.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Tiers\PenWriting.xnb

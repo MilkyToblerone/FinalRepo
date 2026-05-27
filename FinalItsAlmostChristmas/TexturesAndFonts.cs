@@ -32,6 +32,14 @@ class TexturesAndFonts
     public Texture2D resultScreen;
 
     public SpriteFont fightFont;
+    public SpriteFont fightFontSmall;
+
+    public Texture2D ATier;
+    public Texture2D BTier;
+    public Texture2D CTier;
+    public Texture2D STier;
+    public Texture2D FTier;
+    public SoundEffect writingSFX;
 
     static TexturesAndFonts instance;
 
@@ -54,6 +62,7 @@ class TexturesAndFonts
         badApple = game1.Content.Load<Song>("BadApple");
         bookendSong = game1.Content.Load<Song>("BookendOpening");
         fightFont = game1.Content.Load<SpriteFont>("Fonts/FightFont");
+        fightFontSmall = game1.Content.Load<SpriteFont>("Fonts/FightFontSmall");
         clickSFX = game1.Content.Load<SoundEffect>("MetalClick");
         blissBoutique = game1.Content.Load<Song>("BlissBoutique");
         mainMenuBG = game1.Content.Load<Texture2D>("Mine_MainMenu");
@@ -73,5 +82,11 @@ class TexturesAndFonts
         badReactionTexture = game1.Content.Load<Texture2D>("Reactions/Bad_Face");
         missReactionTexture = game1.Content.Load<Texture2D>("Reactions/Miss_Face");
         resultScreen = game1.Content.Load<Texture2D>("ResultScreen");
+        ATier = game1.Content.Load<Texture2D>("Tiers/Tier_A");
+        BTier = game1.Content.Load<Texture2D>("Tiers/Tier_B");
+        CTier = game1.Content.Load<Texture2D>("Tiers/Tier_C");
+        FTier = game1.Content.Load<Texture2D>("Tiers/Tier_F");
+        STier = game1.Content.Load<Texture2D>("Tiers/Tier_S");
+        writingSFX = game1.Content.Load<SoundEffect>("Tiers/PenWriting");
     }
 }

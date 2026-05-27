@@ -26,6 +26,7 @@ namespace FinalItsAlmostChristmas
         {
             resultState = new ResultState(game1, spriteBatch);
             ChartManager.getInstance().resultScene = resultState;
+            
         }
 
         public override void OnEnter()
@@ -38,9 +39,11 @@ namespace FinalItsAlmostChristmas
             _isFadingOut = false;
             _fadeOutTimer = 0.0;
             startWriting = "3";
+            ResultState.rythmBubbleAmount = ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Count;
         }
         public override void OnExit()
         {
+            MediaPlayer.Stop();
         }
 
         public override void LoadContent()

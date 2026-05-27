@@ -106,7 +106,6 @@ class NewRythmBubbles
     
     public void Draw(SpriteBatch spriteBatch)
     {
-        System.Console.WriteLine(orderNumber);
         if (!isActive)
             return;
         bubbleTexture.Draw(spriteBatch, Color.White,pos);

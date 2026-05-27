@@ -42,7 +42,7 @@ public class Game1 : Game
         tetoState.LoadContent();
         tetoState.mainMenuScene = mikuState;
         StateManager.Initialize(mikuState);
-        
+        ResultState.mikuState = mikuState;
     }
 
     protected override void Update(GameTime gameTime)
