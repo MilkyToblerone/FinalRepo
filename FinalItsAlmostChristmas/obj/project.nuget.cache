@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "twFXdLKroRc=",
+  "dgSpecHash": "F03AxRd6cjY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
+  "projectFilePath": "c:\\Users\\doguh\\Desktop\\GP2Files\\FinalItsAlmostChristmas\\FinalRepo\\FinalItsAlmostChristmas\\FinalItsAlmostChristmas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\doguh\\.nuget\\packages\\monogame.content.builder.task\\3.8.4.1\\monogame.content.builder.task.3.8.4.1.nupkg.sha512",
     "C:\\Users\\doguh\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.4.1\\monogame.framework.desktopgl.3.8.4.1.nupkg.sha512",

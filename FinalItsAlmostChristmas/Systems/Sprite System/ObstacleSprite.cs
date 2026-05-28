@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
 class ObstacleSprite 
@@ -12,6 +13,10 @@ class ObstacleSprite
     bool inFront;
     float layerNumber;
     float yPos = 180;
+    Random random;
+
+    SoundEffectInstance breakSFX;
+    bool sfxPlayed = false;
 
 
     Rectangle sourceRect
@@ -25,6 +30,7 @@ class ObstacleSprite
     public ObstacleSprite(NewRythmBubbles rythmBubble)
     {
         assigendRythmBubble = rythmBubble;
+        random = new();
 
         // switch for setting up the pos.
         switch (assigendRythmBubble.orderNumber)
@@ -40,11 +46,14 @@ class ObstacleSprite
                 break;
         }
 
-        // switch for setting the texture
+        // switch for setting the texture and the break sound
         switch (assigendRythmBubble.toolType)
         {
             case ToolTypes.Pickaxe:
                 spriteTexture = TexturesAndFonts.getInstance().stoneTexture;
+                breakSFX = TexturesAndFonts.getInstance().RockBreakSFX.CreateInstance();
+                breakSFX.Pitch = random.Next(-10, 10) / 10;
+                breakSFX.Volume = 0.02f;
                 break;
             case ToolTypes.Axe:
                 spriteTexture = TexturesAndFonts.getInstance().woodTexture;
@@ -58,7 +67,7 @@ class ObstacleSprite
     public void Update(GameTime gameTime)
     {
 
-        if(ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) > 2 && !(assigendRythmBubble.orderNumber == 0 && ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) == 3))
+        if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) > 2 && !(assigendRythmBubble.orderNumber == 0 && ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) == 3))
         {
             color = Color.Black;
             inFront = false;
@@ -67,7 +76,7 @@ class ObstacleSprite
         }
         else if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) != assigendRythmBubble.orderNumber && !inFront)
         {
-            color = new Color(50,50,50);
+            color = new Color(50, 50, 50);
             inFront = false;
             layerNumber = 0.2f;
         }
@@ -77,6 +86,7 @@ class ObstacleSprite
             inFront = true;
             layerNumber = 0.3f;
         }
+        if (assigendRythmBubble.IsExpired && !sfxPlayed && breakSFX !=null) { breakSFX.Play(); sfxPlayed = true; }
     }
 
 
@@ -87,6 +97,8 @@ class ObstacleSprite
         if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) > 5) return;
         Vector2 origin = new Vector2(spriteTexture.Width / 2f, spriteTexture.Height / 2f);
         spriteBatch.Draw(spriteTexture, pos, sourceRect, color, 0, origin, scale, SpriteEffects.None, layerNumber);
+
+        
     }
 
 }

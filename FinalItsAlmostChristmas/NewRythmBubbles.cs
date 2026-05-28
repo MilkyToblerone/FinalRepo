@@ -1,5 +1,6 @@
 using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 
 
@@ -24,6 +25,7 @@ class NewRythmBubbles
     Random random;
     int randomXvalue;
     Vector2 pos = new();
+
 
     public NewRythmBubbles(double chartTime, double timeToClose, ToolTypes toolType, Vector2 pos)
     {
@@ -70,6 +72,8 @@ class NewRythmBubbles
                 this.pos = new Vector2(910 + randomXvalue, 850);
                 break;
         }
+
+        
     }
     public void Update(GameTime gameTime)
     {

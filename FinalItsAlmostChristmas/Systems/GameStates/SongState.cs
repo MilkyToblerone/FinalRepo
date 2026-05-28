@@ -19,14 +19,15 @@ namespace FinalItsAlmostChristmas
         ScaleableSprite sideWallLeft;
         ScaleableSprite sideWallRight;
         ScaleableSprite reactionPic;
-
+        Animation axeAnim;
         GameState resultState;
 
         public SongState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
             resultState = new ResultState(game1, spriteBatch);
             ChartManager.getInstance().resultScene = resultState;
-            
+            axeAnim = new(TexturesAndFonts.getInstance().axeAnimSheet, 4, 0.05f);
+            InputSystems.getInstance().RythmButtonPressed += axeAnim.PlayAnimation;
         }
 
         public override void OnEnter()
@@ -62,6 +63,7 @@ namespace FinalItsAlmostChristmas
             {
                 StateManager.SwitchState(resultState);
             }
+            axeAnim.Update(gameTime);
         }
 
         private void ManageReactionTexture()
@@ -132,6 +134,7 @@ namespace FinalItsAlmostChristmas
             sideWallRight.Draw(_spritebatch, 0.01f, 1.5f, SpriteEffects.FlipHorizontally);
             reactionPic.Draw(_spritebatch, 0.2f, 0.4f);
             ChartManager.getInstance().Draw(_spritebatch);
+            axeAnim.Draw(_spritebatch);
         }
 
         private void DrawStartWriting()

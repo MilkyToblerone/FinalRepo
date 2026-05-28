@@ -40,7 +40,10 @@ class TexturesAndFonts
     public Texture2D STier;
     public Texture2D FTier;
     public SoundEffect writingSFX;
+    public Texture2D axeAnimSheet;
 
+    public SoundEffect RockBreakSFX;
+    public SpriteFont gloriaFont;
     static TexturesAndFonts instance;
 
     // SINGLETON LOGIC
@@ -88,5 +91,8 @@ class TexturesAndFonts
         FTier = game1.Content.Load<Texture2D>("Tiers/Tier_F");
         STier = game1.Content.Load<Texture2D>("Tiers/Tier_S");
         writingSFX = game1.Content.Load<SoundEffect>("Tiers/PenWriting");
+        axeAnimSheet = game1.Content.Load<Texture2D>("AxeAnimSprite");
+        RockBreakSFX = game1.Content.Load<SoundEffect>("BreakingSFX/RockDestroy");
+        gloriaFont = game1.Content.Load<SpriteFont>("Gloria");
     }
 }

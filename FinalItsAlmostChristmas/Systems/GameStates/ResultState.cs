@@ -81,7 +81,7 @@ namespace FinalItsAlmostChristmas
             ResultsBG.Draw(_spritebatch);
             resultScreenButtonManager.Draw(_spritebatch);
             DrawResults();
-            if (timer > 14 && !sfxPlayed)
+            if (timer > 8 && !sfxPlayed)
             {
                 TexturesAndFonts.getInstance().writingSFX.Play();
                 sfxPlayed = true;
@@ -90,37 +90,37 @@ namespace FinalItsAlmostChristmas
 
         private void DrawResults()
         {
+            if (timer > 1)
+            {
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont, "Miss: "
+                + (int)MathHelper.Lerp(0, ChartManager.getInstance().missNumber, Math.Clamp(timer - 1, 0, 1)), new Vector2(1160, 640), Color.Black);
+            }
             if (timer > 2)
             {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Miss: "
-                + (int)MathHelper.Lerp(0, ChartManager.getInstance().missNumber, Math.Clamp(timer - 2, 0, 1)), new Vector2(1160, 640), Color.Red);
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont, "Bad: "
+                + (int)MathHelper.Lerp(0, ChartManager.getInstance().badNumber, Math.Clamp(timer - 2, 0, 1)), new Vector2(1160, 550), Color.Black);
             }
-            if (timer > 4)
+            if (timer > 3.5)
             {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Bad: "
-                + (int)MathHelper.Lerp(0, ChartManager.getInstance().badNumber, Math.Clamp(timer - 4, 0, 1)), new Vector2(1160, 550), Color.Orange);
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont, "Okay: "
+                + (int)MathHelper.Lerp(0, ChartManager.getInstance().okayNumber, Math.Clamp(timer - 3.5f, 0, 1)), new Vector2(1160, 460), Color.Black);
             }
-            if (timer > 6)
+            if (timer > 4.5)
             {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Okay: "
-                + (int)MathHelper.Lerp(0, ChartManager.getInstance().okayNumber, Math.Clamp(timer - 6, 0, 1)), new Vector2(1160, 460), Color.Yellow);
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont, "Good: "
+                + (int)MathHelper.Lerp(0, ChartManager.getInstance().goodNumber, Math.Clamp(timer - 4.5f, 0, 1)), new Vector2(1160, 370), Color.Black);
+            }
+            if (timer > 5.5)
+            {
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont, "Perfect: "
+                + (int)MathHelper.Lerp(0, ChartManager.getInstance().perfectNumber, Math.Clamp(timer - 5.5f, 0, 1)), new Vector2(1160, 280), Color.Black);
+            }
+            if (timer > 7)
+            {
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().gloriaFont,
+                +(int)MathHelper.Lerp(0, complationPercent, Math.Clamp(timer - 7, 0, 1)) + "%", new Vector2(1200, 180), Color.Black); 
             }
             if (timer > 8)
-            {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Good: "
-                + (int)MathHelper.Lerp(0, ChartManager.getInstance().goodNumber, Math.Clamp(timer - 8, 0, 1)), new Vector2(1160, 370), Color.LimeGreen);
-            }
-            if (timer > 10)
-            {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Perfect: "
-                + (int)MathHelper.Lerp(0, ChartManager.getInstance().perfectNumber, Math.Clamp(timer - 10, 0, 1)), new Vector2(1160, 280), Color.Gold);
-            }
-            if (timer > 12)
-            {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont,
-                +(int)MathHelper.Lerp(0, complationPercent, Math.Clamp(timer - 12, 0, 1)) + "%", new Vector2(1200, 180), Color.White);
-            }
-            if (timer > 14)
             {
                 switch (complationPercent)
                 {
