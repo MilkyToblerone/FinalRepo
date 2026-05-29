@@ -19,15 +19,18 @@ namespace FinalItsAlmostChristmas
         ScaleableSprite sideWallLeft;
         ScaleableSprite sideWallRight;
         ScaleableSprite reactionPic;
-        Animation axeAnim;
+        Animation toolAnim;
+        ScaleableSprite pickaxeIcon;
+        ScaleableSprite axeIcon;
+        ScaleableSprite shovelIcon;
         GameState resultState;
 
         public SongState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
             resultState = new ResultState(game1, spriteBatch);
             ChartManager.getInstance().resultScene = resultState;
-            axeAnim = new(TexturesAndFonts.getInstance().axeAnimSheet, 4, 0.05f);
-            InputSystems.getInstance().RythmButtonPressed += axeAnim.PlayAnimation;
+            toolAnim = new(4, 0.05f);
+            InputSystems.getInstance().RythmButtonPressed += toolAnim.PlayAnimation;
         }
 
         public override void OnEnter()
@@ -44,7 +47,6 @@ namespace FinalItsAlmostChristmas
         }
         public override void OnExit()
         {
-            MediaPlayer.Stop();
         }
 
         public override void LoadContent()
@@ -52,6 +54,10 @@ namespace FinalItsAlmostChristmas
             sideWallLeft = new(TexturesAndFonts.getInstance().sideWallTexture, new Vector2(1390, 540), 1f);
             sideWallRight = new(TexturesAndFonts.getInstance().sideWallTexture, new Vector2(530, 540), 1f);
             reactionPic = new(new Vector2(250, 250), 0.2f);
+
+            pickaxeIcon = new(TexturesAndFonts.getInstance().pickaxeIcon, new Vector2(150, 930), 1f);
+            axeIcon = new(TexturesAndFonts.getInstance().axeIcon, new Vector2(350, 930), 1f);
+            shovelIcon = new(TexturesAndFonts.getInstance().shovelIcon, new Vector2(550, 930), 1f);
         }
         public override void Update(GameTime gameTime)
         {
@@ -60,10 +66,9 @@ namespace FinalItsAlmostChristmas
             ChartManager.getInstance().Update(gameTime);
             ManageReactionTexture();
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
-            {
-                StateManager.SwitchState(resultState);
+            {   MusicPlayer.SongEnd?.Invoke();
             }
-            axeAnim.Update(gameTime);
+            toolAnim.Update(gameTime);
         }
 
         private void ManageReactionTexture()
@@ -134,7 +139,20 @@ namespace FinalItsAlmostChristmas
             sideWallRight.Draw(_spritebatch, 0.01f, 1.5f, SpriteEffects.FlipHorizontally);
             reactionPic.Draw(_spritebatch, 0.2f, 0.4f);
             ChartManager.getInstance().Draw(_spritebatch);
-            axeAnim.Draw(_spritebatch);
+            toolAnim.Draw(_spritebatch);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "G",
+            new Vector2(140, 700), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0.5f);
+            pickaxeIcon.Draw(_spritebatch, 0.3f, 0.16f);
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "H",
+            new Vector2(340, 700), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0.5f);
+            axeIcon.Draw(_spritebatch, 0.3f, 0.16f);
+
+
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Y",
+            new Vector2(540, 700), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0.5f);
+            shovelIcon.Draw(_spritebatch, 0.3f, 0.16f);
         }
 
         private void DrawStartWriting()

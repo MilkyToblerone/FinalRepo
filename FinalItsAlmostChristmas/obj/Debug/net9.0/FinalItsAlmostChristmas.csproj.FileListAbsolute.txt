@@ -111,3 +111,13 @@ c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\AxeAnimSprite.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BreakingSFX\RockDestroy.xnb
 c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Gloria.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\PuzzleSolvedOneshot.ogg
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\PuzzleSolvedOneshot.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\PickaxeAnimSheet.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\ShovelAnimSheet.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Glint.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Icon_Axe.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Icon_Pickaxe.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\Icon_Shovel.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\DirtDestroySFX.xnb
+c:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Debug\net9.0\Content\BreakingSFX\WoodBreakSFX.xnb

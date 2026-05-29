@@ -8,6 +8,7 @@ class NewRythmBubbles
 {
     ScaleableSprite bubbleTexture;
     ScaleableSprite outerBubbleTexture;
+    ScaleableSprite glint;
     public double chartTime { get; private set; }
     public double timeToClose { get; private set; }
     public ToolTypes toolType;
@@ -24,6 +25,7 @@ class NewRythmBubbles
     public int orderNumber;
     Random random;
     int randomXvalue;
+    double songMs;
     Vector2 pos = new();
 
 
@@ -52,6 +54,8 @@ class NewRythmBubbles
         var game = TexturesAndFonts.getInstance().game1;
         var baseTex = game.Content.Load<Texture2D>("Bubble");
         var circleTex = game.Content.Load<Texture2D>("Circle");
+
+        
         Vector2 pos = new();
         const float initialScale = 0.05f;
         bubbleTexture = new ScaleableSprite(baseTex, pos, initialScale);
@@ -72,7 +76,7 @@ class NewRythmBubbles
                 this.pos = new Vector2(910 + randomXvalue, 850);
                 break;
         }
-
+        glint = new ScaleableSprite(TexturesAndFonts.getInstance().glintTex,this.pos,initialScale / 2);
         
     }
     public void Update(GameTime gameTime)
@@ -80,7 +84,7 @@ class NewRythmBubbles
         if (IsExpired)
             return;
 
-        double songMs = ChartManager.getInstance().songElapsedTime;
+        songMs = ChartManager.getInstance().songElapsedTime;
 
         if (!_ringStarted)
         {
@@ -113,6 +117,7 @@ class NewRythmBubbles
         if (!isActive)
             return;
         bubbleTexture.Draw(spriteBatch, Color.White,pos);
-        outerBubbleTexture.Draw(spriteBatch, Color.White,pos);
+        outerBubbleTexture.Draw(spriteBatch, Color.White, pos);
+        if (chartTime + timeToClose / 2 - 50 < songMs && songMs < chartTime + timeToClose / 2 + 50) glint.Draw(spriteBatch, 0.99f, 0.1f,pos);
     }
 }

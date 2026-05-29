@@ -79,6 +79,12 @@
 /processorParam:Quality=Best
 /build:BreakingSFX/RockDestroy.wav
 
+#begin BreakingSFX/WoodBreakSFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:BreakingSFX/WoodBreakSFX.wav
+
 #begin brokenObsPlaceholder.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -127,6 +133,12 @@
 /processorParam:TextureFormat=Color
 /build:dirtBGPlaceholder.jpg
 
+#begin DirtDestroySFX.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:DirtDestroySFX.wav
+
 #begin DirtObs.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -165,12 +177,60 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/FightFontSmall.spritefont
 
+#begin Glint.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Glint.png
+
 #begin Gloria.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Gloria.spritefont
+
+#begin Icon_Axe.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Icon_Axe.png
+
+#begin Icon_Pickaxe.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Icon_Pickaxe.png
+
+#begin Icon_Shovel.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Icon_Shovel.png
 
 #begin MetalClick.wav
 /importer:WavImporter
@@ -189,6 +249,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Mine_MainMenu.png
+
+#begin PickaxeAnimSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:PickaxeAnimSheet.png
 
 #begin pissmiku.jpg
 /importer:TextureImporter
@@ -297,6 +369,18 @@
 /processor:SoundEffectProcessor
 /processorParam:Quality=Best
 /build:Select.wav
+
+#begin ShovelAnimSheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:ShovelAnimSheet.png
 
 #begin Side_Wall.png
 /importer:TextureImporter

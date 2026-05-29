@@ -43,8 +43,24 @@ class TexturesAndFonts
     public Texture2D axeAnimSheet;
 
     public SoundEffect RockBreakSFX;
+
+    public SoundEffect DirtBreakSFX;
+
+    public SoundEffect WoodBreakSFX;
+
     public SpriteFont gloriaFont;
+    public Song resultMusic;
+    public Texture2D pickAxeAnimSheet;
+    public Texture2D shovelAnimSheet;
+    public Texture2D glintTex;
+
+    public Texture2D pickaxeIcon;
+    public Texture2D axeIcon;
+    public Texture2D shovelIcon;
+
     static TexturesAndFonts instance;
+
+
 
     // SINGLETON LOGIC
     private TexturesAndFonts()
@@ -93,6 +109,17 @@ class TexturesAndFonts
         writingSFX = game1.Content.Load<SoundEffect>("Tiers/PenWriting");
         axeAnimSheet = game1.Content.Load<Texture2D>("AxeAnimSprite");
         RockBreakSFX = game1.Content.Load<SoundEffect>("BreakingSFX/RockDestroy");
+        DirtBreakSFX = game1.Content.Load<SoundEffect>("DirtDestroySFX");
+        WoodBreakSFX = game1.Content.Load<SoundEffect>("BreakingSFX/WoodBreakSFX");
         gloriaFont = game1.Content.Load<SpriteFont>("Gloria");
+        resultMusic = game1.Content.Load<Song>("PuzzleSolvedOneshot");
+        pickAxeAnimSheet = game1.Content.Load<Texture2D>("PickaxeAnimSheet");
+        shovelAnimSheet = game1.Content.Load<Texture2D>("ShovelAnimSheet");
+        glintTex = game1.Content.Load<Texture2D>("Glint");
+
+        pickaxeIcon = game1.Content.Load<Texture2D>("Icon_Pickaxe");
+        axeIcon = game1.Content.Load<Texture2D>("Icon_Axe");
+        shovelIcon = game1.Content.Load<Texture2D>("Icon_Shovel");
+
     }
 }

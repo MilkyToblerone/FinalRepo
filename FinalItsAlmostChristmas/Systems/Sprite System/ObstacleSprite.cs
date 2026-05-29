@@ -53,12 +53,17 @@ class ObstacleSprite
                 spriteTexture = TexturesAndFonts.getInstance().stoneTexture;
                 breakSFX = TexturesAndFonts.getInstance().RockBreakSFX.CreateInstance();
                 breakSFX.Pitch = random.Next(-10, 10) / 10;
-                breakSFX.Volume = 0.02f;
+                breakSFX.Volume = 0.03f;
                 break;
             case ToolTypes.Axe:
                 spriteTexture = TexturesAndFonts.getInstance().woodTexture;
+                breakSFX = TexturesAndFonts.getInstance().WoodBreakSFX.CreateInstance();
+                breakSFX.Volume = 0.1f;
                 break;
             case ToolTypes.Shovel:
+                breakSFX = TexturesAndFonts.getInstance().DirtBreakSFX.CreateInstance();
+                breakSFX.Pitch = random.Next(-10, 10) / 10;
+                breakSFX.Volume = 0.1f;
                 spriteTexture = TexturesAndFonts.getInstance().dirtTexture;
                 break;
         }
@@ -84,7 +89,18 @@ class ObstacleSprite
         {
             color = Color.White;
             inFront = true;
-            layerNumber = 0.3f;
+            if (assigendRythmBubble.orderNumber == 0)
+            {
+                layerNumber = 0.3f;
+            }
+            else if (assigendRythmBubble.orderNumber == 1)
+            {
+                layerNumber = 0.31f;
+            }
+            else if (assigendRythmBubble.orderNumber == 2)
+            {
+                layerNumber = 0.32f;
+            }
         }
         if (assigendRythmBubble.IsExpired && !sfxPlayed && breakSFX !=null) { breakSFX.Play(); sfxPlayed = true; }
     }
@@ -97,8 +113,6 @@ class ObstacleSprite
         if (ChartManager.getInstance().currentChart.allOfTheRythmBubbles.IndexOf(assigendRythmBubble) > 5) return;
         Vector2 origin = new Vector2(spriteTexture.Width / 2f, spriteTexture.Height / 2f);
         spriteBatch.Draw(spriteTexture, pos, sourceRect, color, 0, origin, scale, SpriteEffects.None, layerNumber);
-
-        
     }
 
 }

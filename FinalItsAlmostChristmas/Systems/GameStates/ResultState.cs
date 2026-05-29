@@ -2,6 +2,7 @@
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
 namespace FinalItsAlmostChristmas
 {
@@ -19,7 +20,8 @@ namespace FinalItsAlmostChristmas
         float complationPercent;
         bool sfxPlayed;
         bool mainmenuPressed = false;
-        float menuTimer=0;
+        float menuTimer = 0;
+        bool resultMusicPlayed = false;
         public ResultState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
             ResultsBG = new(TexturesAndFonts.getInstance().resultScreen, Vector2.Zero);
@@ -43,10 +45,10 @@ namespace FinalItsAlmostChristmas
             timer = 0;
             complationPercent = 0;
             sfxPlayed = false;
-            System.Console.WriteLine(rythmBubbleAmount);
+            resultMusicPlayed = false;
             mainmenuPressed = false;
             menuTimer=0;
-            
+
             if (rythmBubbleAmount > 0)
             {
                 float perfectGiverAmount = 100f / (float)rythmBubbleAmount;
@@ -58,8 +60,8 @@ namespace FinalItsAlmostChristmas
                 complationPercent += goodGiverAmount * ChartManager.getInstance().goodNumber;
                 complationPercent += okayGiverAmount * ChartManager.getInstance().okayNumber;
                 complationPercent += badGiverAmount * ChartManager.getInstance().badNumber;
-                System.Console.WriteLine(perfectGiverAmount);
             }
+            
         }
         public override void OnExit()
         {
@@ -73,6 +75,7 @@ namespace FinalItsAlmostChristmas
         {
             resultScreenButtonManager.Update(gameTime);
             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (timer > 0.15f && resultMusicPlayed == false) {MediaPlayer.Play(TexturesAndFonts.getInstance().resultMusic); resultMusicPlayed = true; }
             if (mainmenuPressed) menuTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (menuTimer > 0.2f) StateManager.SwitchState(mikuState);
         }

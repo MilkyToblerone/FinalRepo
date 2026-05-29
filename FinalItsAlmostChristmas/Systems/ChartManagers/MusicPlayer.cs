@@ -9,6 +9,7 @@ class MusicPlayer
     public SongClock songClock;
     public Song selectedSong;
     public static Action SongEnd;
+    
     public void Load()
     {
 
@@ -40,7 +41,11 @@ class MusicPlayer
 
             if (songElapsedTime >= maxSongTime)
             {
+                ChartManager.getInstance().isSongPlaying = false;
                 SongEnd?.Invoke();
+                songElapsedTime = 0;
+                ChartManager.getInstance().songElapsedTime = songElapsedTime;
+                System.Console.WriteLine("ahmet");
             }
         }
         
