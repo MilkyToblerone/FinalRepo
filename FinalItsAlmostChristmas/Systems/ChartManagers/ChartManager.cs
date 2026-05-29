@@ -41,6 +41,7 @@ class ChartManager
     public Chart currentChart;
     public Chart bookendChart;
     public Chart badAppleChart;
+    public Chart tutorialChart;
     public double beatTimeThreshold;
     public ChartMaker chartMaker;
     public List<ObstacleSprite> obstacles;
@@ -67,6 +68,7 @@ class ChartManager
 
         bookendChart = new BookendsongChart();
         badAppleChart = new BadAppleChart();
+        tutorialChart = new TutorialChart();
 
 
         songClock = new();

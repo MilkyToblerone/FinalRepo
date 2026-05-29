@@ -69,3 +69,25 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\obj\Release\net9.0\FinalItsAlmostChristmas.pdb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\obj\Release\net9.0\FinalItsAlmostChristmas.genruntimeconfig.cache
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\obj\Release\net9.0\ref\FinalItsAlmostChristmas.dll
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\AxeAnimSprite.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\BreakingSFX\RockDestroy.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\BreakingSFX\WoodBreakSFX.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\DirtDestroySFX.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Glint.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Gloria.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Icon_Axe.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Icon_Pickaxe.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Icon_Shovel.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\PickaxeAnimSheet.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\PuzzleSolvedOneshot.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\PuzzleSolvedOneshot.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\ShovelAnimSheet.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_1.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_2.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_3.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_4.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_5.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Tutorial Voicelines\Line_6.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\TutorialCover.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\TutorialDrumLoop.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\TutorialDrumLoop.xnb

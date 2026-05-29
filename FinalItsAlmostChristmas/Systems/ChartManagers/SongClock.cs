@@ -4,12 +4,21 @@ class SongClock
 {
     public double songsElapsedTime;
     double offset = 0;
+    public  bool songClockPaused;
     public SongClock()
     {
     }
     public double SongClockUpdate(GameTime gameTime)
     {
-        songsElapsedTime = gameTime.ElapsedGameTime.TotalMilliseconds + offset;
+        if (!songClockPaused)
+        {
+            songsElapsedTime = gameTime.ElapsedGameTime.TotalMilliseconds + offset;
+        }
+        else
+        {
+            songsElapsedTime = 0;
+        }
+        
         return songsElapsedTime;
     }
 

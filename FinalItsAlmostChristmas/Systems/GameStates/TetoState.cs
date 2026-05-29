@@ -15,30 +15,32 @@ namespace FinalItsAlmostChristmas
         public GameState nextState;
         public GameState mainMenuScene;
         ButtonManager songStateButtonManager;
-        Button badAppleButon;
-        ScaleableSprite badAppleCover;
+        Button tutorialButton;
+        ScaleableSprite tutorialCover;
 
         Button bookendSongButton;
         ScaleableSprite bookendSongCover;
 
         SongState songState;
+        TutorialState tutorialState;
         
         public TetoState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
             songState = new(game1, _spritebatch);
+            tutorialState = new(game1, _spritebatch);
             songStateButtonManager = new(ButtonTypes.LeftToRight);
             songStateButtonManager.isBeingUsed = false;
 
-            badAppleButon = new(new Vector2(175, 700), "Bad Apple");
-            badAppleCover = new(TexturesAndFonts.getInstance().badAppleCover, new Vector2(300, 400), 1f);
+            tutorialButton = new(new Vector2(175, 700), "Tutorial");
+            tutorialCover = new(TexturesAndFonts.getInstance().tutorialCover, new Vector2(300, 400), 1f);
 
             bookendSongButton = new(new Vector2(700, 700), "Bookend Song");
             bookendSongCover = new(TexturesAndFonts.getInstance().bookendCover, new Vector2(925, 400), 1f);
 
-            songStateButtonManager.buttons.Add(badAppleButon);
+            songStateButtonManager.buttons.Add(tutorialButton);
             songStateButtonManager.buttons.Add(bookendSongButton);
 
-            badAppleButon.OnPressed += SwitchoverToBadApple;
+            tutorialButton.OnPressed += SwitchoverToTutorial;
             bookendSongButton.OnPressed += SwitchoverToBookendSong; 
             ResultState.songState = songState;
         }
@@ -57,6 +59,7 @@ namespace FinalItsAlmostChristmas
         {
             songSelectBG = new(TexturesAndFonts.getInstance().songSelectBG,songSelectBGPos);
             songState.LoadContent();
+            tutorialState.LoadContent();
         }
 
         public override void Update(GameTime gameTime)
@@ -68,14 +71,14 @@ namespace FinalItsAlmostChristmas
         {
             songSelectBG.Draw(_spritebatch, songSelectBGPos);
             songStateButtonManager.Draw(_spritebatch);
-            badAppleCover.Draw(_spritebatch, badAppleButon.currentScale);
+            tutorialCover.Draw(_spritebatch, tutorialButton.currentScale);
 
             bookendSongCover.Draw(_spritebatch, bookendSongButton.currentScale);
         }
-        void SwitchoverToBadApple()
+        void SwitchoverToTutorial()
         {
-            ChartManager.getInstance().SetChart(ChartManager.getInstance().badAppleChart);
-            StateManager.SwitchState(songState);
+            ChartManager.getInstance().SetChart(ChartManager.getInstance().tutorialChart);
+            StateManager.SwitchState(tutorialState);
         }
         void SwitchoverToBookendSong()
         {

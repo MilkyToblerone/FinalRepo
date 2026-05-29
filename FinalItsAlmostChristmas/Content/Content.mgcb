@@ -472,6 +472,60 @@
 /processorParam:TextureFormat=Color
 /build:Tiers/Tier_S.png
 
+#begin Tutorial Voicelines/Line_1.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_1.mp3
+
+#begin Tutorial Voicelines/Line_2.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_2.mp3
+
+#begin Tutorial Voicelines/Line_3.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_3.mp3
+
+#begin Tutorial Voicelines/Line_4.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_4.mp3
+
+#begin Tutorial Voicelines/Line_5.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_5.mp3
+
+#begin Tutorial Voicelines/Line_6.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Tutorial Voicelines/Line_6.mp3
+
+#begin TutorialCover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TutorialCover.png
+
+#begin TutorialDrumLoop.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:TutorialDrumLoop.mp3
+
 #begin UNBEATABLE OST - BOOKEND  -opening version-.mp3
 /importer:Mp3Importer
 /processor:SongProcessor

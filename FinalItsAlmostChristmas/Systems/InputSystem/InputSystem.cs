@@ -36,8 +36,10 @@ sealed class InputSystems
     bool rythButtonPressedBoolAxe;
     bool confirmPressed;
     bool declinePressed;
+    public bool inputsLocked;
     public void CheckInputs()
     {
+        if (inputsLocked) return;
         KeyboardState keyboardState = Keyboard.GetState();
         if (keyboardState.IsKeyDown(Keys.W) || keyboardState.IsKeyDown(Keys.Up)) { if (!directionUpPressed) { UpPressed?.Invoke(); directionUpPressed = true; } }
         if (keyboardState.IsKeyDown(Keys.D) || keyboardState.IsKeyDown(Keys.Right)) { if (!directionRightPressed) { RightPressed?.Invoke(); directionRightPressed = true; } }

@@ -66,7 +66,8 @@ namespace FinalItsAlmostChristmas
             ChartManager.getInstance().Update(gameTime);
             ManageReactionTexture();
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
-            {   MusicPlayer.SongEnd?.Invoke();
+            {
+                ChartManager.getInstance().songClock.songClockPaused = true;
             }
             toolAnim.Update(gameTime);
         }
