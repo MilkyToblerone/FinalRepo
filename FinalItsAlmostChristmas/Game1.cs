@@ -19,7 +19,7 @@ public class Game1 : Game
         _graphics.PreferredBackBufferWidth = 1920;
         _graphics.PreferredBackBufferHeight = 1080;
         IsMouseVisible = false;
-        _graphics.IsFullScreen = false;
+        _graphics.IsFullScreen = true;
     }
 
     protected override void Initialize()

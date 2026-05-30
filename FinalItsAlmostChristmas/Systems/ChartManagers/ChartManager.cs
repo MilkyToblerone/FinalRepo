@@ -42,8 +42,11 @@ class ChartManager
     public Chart bookendChart;
     public Chart badAppleChart;
     public Chart tutorialChart;
+    public Chart poppipoChart;
+    public Chart bakamitaiChart;
+    public Chart loopingTheRoomsChart;
+    public Chart irisOutChart;
     public double beatTimeThreshold;
-    public ChartMaker chartMaker;
     public List<ObstacleSprite> obstacles;
 
     public Action Perfect;
@@ -62,13 +65,17 @@ class ChartManager
     public void Load()
     {
         judge = new();
-        chartMaker = ChartMaker.getInstance();
-        chartMaker.Initialize();
 
 
         bookendChart = new BookendsongChart();
         badAppleChart = new BadAppleChart();
         tutorialChart = new TutorialChart();
+        poppipoChart = new PoppipoChart();
+        bakamitaiChart = new BakamitaiChart();
+        loopingTheRoomsChart = new LoopingTheRoomsChart();
+        irisOutChart = new irisOutChart();
+
+        
 
 
         songClock = new();

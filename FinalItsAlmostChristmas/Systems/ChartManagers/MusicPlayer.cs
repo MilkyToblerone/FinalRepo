@@ -45,7 +45,6 @@ class MusicPlayer
                 SongEnd?.Invoke();
                 songElapsedTime = 0;
                 ChartManager.getInstance().songElapsedTime = songElapsedTime;
-                System.Console.WriteLine("ahmet");
             }
         }
         

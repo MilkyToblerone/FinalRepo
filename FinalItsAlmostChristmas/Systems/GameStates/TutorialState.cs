@@ -72,6 +72,15 @@ namespace FinalItsAlmostChristmas
             ResultState.rythmBubbleAmount = ChartManager.getInstance().currentChart.allOfTheRythmBubbles.Count;
             InputSystems.getInstance().inputsLocked = true;
             voicelineTimer = 0;
+            voiceLine1Played = false;
+            voiceLine2Played = false;
+            voiceLine3Played = false;
+            voiceLine4Played = false;
+            voiceLine5Played = false;
+            voiceLine6Played = false;
+            pickaxeUnlocked = false;
+            axeUnlocked = false;
+            shovelUnlocked = false;
         }
         public override void OnExit()
         {
@@ -238,7 +247,7 @@ namespace FinalItsAlmostChristmas
 
             if (shovelUnlocked)
             {
-                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Y",
+                _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "J",
                 new Vector2(540, 700), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0.5f);
                 shovelIcon.Draw(_spritebatch, 0.3f, 0.16f);
             }

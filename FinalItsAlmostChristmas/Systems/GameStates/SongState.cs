@@ -65,10 +65,6 @@ namespace FinalItsAlmostChristmas
             UpdateFadeIn(gameTime);
             ChartManager.getInstance().Update(gameTime);
             ManageReactionTexture();
-            if (Keyboard.GetState().IsKeyDown(Keys.Tab))
-            {
-                ChartManager.getInstance().songClock.songClockPaused = true;
-            }
             toolAnim.Update(gameTime);
         }
 
@@ -114,7 +110,6 @@ namespace FinalItsAlmostChristmas
                     _isFadingOut = true;
                     _fadeOutTimer = 1;
                     ChartManager.getInstance().StartingSong(ChartManager.getInstance().currentChart);
-                    // ChartManager.getInstance().chartMaker.StartRecording();
                 }
             }
         }
@@ -151,7 +146,7 @@ namespace FinalItsAlmostChristmas
             axeIcon.Draw(_spritebatch, 0.3f, 0.16f);
 
 
-            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "Y",
+            _spritebatch.DrawString(TexturesAndFonts.getInstance().fightFont, "J",
             new Vector2(540, 700), Color.White, 0, Vector2.Zero, 1f, SpriteEffects.None, 0.5f);
             shovelIcon.Draw(_spritebatch, 0.3f, 0.16f);
         }
