@@ -10,8 +10,10 @@ namespace FinalItsAlmostChristmas
     public class MikuState : GameState
     {
         GameState nextState;
+        GameState credits;
         Button startGameButton;
         Button exitButton;
+        Button creditsButton;
         ButtonManager mainMenuButtonManager;
         Sprite menuBG;
         Sprite songSelectBG;
@@ -21,9 +23,10 @@ namespace FinalItsAlmostChristmas
 
         Vector2 menuBGPos = new(0, 0);
         Vector2 songSelectPos = new(0, 1080);
-        public MikuState(Game1 game1, SpriteBatch spriteBatch,GameState tetoState) : base(game1, spriteBatch)
+        public MikuState(Game1 game1, SpriteBatch spriteBatch,GameState tetoState,GameState credits) : base(game1, spriteBatch)
         {
             nextState = tetoState;
+            this.credits = credits;
         }
 
         public override void OnEnter()
@@ -53,15 +56,28 @@ namespace FinalItsAlmostChristmas
             songSelectBG = new(TexturesAndFonts.getInstance().songSelectBG, new Vector2(0, 1920));
             mainMenuButtonManager = new(ButtonTypes.TopToBottom);
 
-            startGameButton = new Button(new Vector2(1300, 600), "Start Game");
-            exitButton = new(new Vector2(1400, 850), "exit");
+            startGameButton = new Button(new Vector2(1300, 600), "Start Game", TexturesAndFonts.getInstance().fightFont, true);
+            creditsButton = new(new Vector2(1300, 760), "credits", TexturesAndFonts.getInstance().fightFont, true);
+            exitButton = new(new Vector2(1300, 900), "exit", TexturesAndFonts.getInstance().fightFont, true);
 
             mainMenuButtonManager.buttons.Add(startGameButton);
+            mainMenuButtonManager.buttons.Add(creditsButton);
             mainMenuButtonManager.buttons.Add(exitButton);
             mainMenuButtonManager.buttons[0].isHovered = true;
 
             startGameButton.OnPressed += StartGame;
+            creditsButton.OnPressed += Credits;
             exitButton.OnPressed += ExitGame;
+        }
+
+        private void Credits()
+        {
+            mainMenuButtonManager.isBeingUsed = false;
+            foreach (var item in mainMenuButtonManager.buttons)
+            {
+                item.isActive = false;
+            }
+            StateManager.SwitchState(credits);
         }
 
         private void ExitGame()

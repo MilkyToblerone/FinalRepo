@@ -3,7 +3,7 @@ using System;
 class Judge
 {
     NewRythmBubbles currentRythmBubble;
-    double perfectOffset = 50;
+    double perfectOffset = 70;
     double goodOffset = 80;
     double okayOffset = 90;
     double badOffset = 100;

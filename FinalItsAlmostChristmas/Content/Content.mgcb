@@ -67,6 +67,12 @@
 /processorParam:Quality=Best
 /build:BlissBoutique.mp3
 
+#begin bluegiant.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:bluegiant.mp3
+
 #begin bookendsongcover.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -127,6 +133,18 @@
 /processorParam:TextureFormat=Color
 /build:Bubble.png
 
+#begin Chibi_Credits.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Chibi_Credits.png
+
 #begin Circle.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -138,6 +156,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Circle.png
+
+#begin CREDITS.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:CREDITS.png
 
 #begin dirtBGPlaceholder.jpg
 /importer:TextureImporter
@@ -255,6 +285,18 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:irisout.mp3
+
+#begin Kerim.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Kerim.png
 
 #begin LoopingtheRooms.mp3
 /importer:Mp3Importer
@@ -412,6 +454,36 @@
 /processorParam:TextureFormat=Color
 /build:RockObs.png
 
+#begin RulerofmyHeart.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:RulerofmyHeart.mp3
+
+#begin rulerofmyheartcover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:rulerofmyheartcover.png
+
+#begin secretsongcover.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:secretsongcover.png
+
 #begin Select.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -453,6 +525,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:SongSelect_BG.png
+
+#begin tarkanop.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:tarkanop.mp3
 
 #begin Tiers/PenWriting.wav
 /importer:WavImporter

@@ -46,6 +46,9 @@ class ChartManager
     public Chart bakamitaiChart;
     public Chart loopingTheRoomsChart;
     public Chart irisOutChart;
+    public Chart rulerOfMyHeart;
+    public Chart blueGiantChart;
+    public Chart tarkanopChart;
     public double beatTimeThreshold;
     public List<ObstacleSprite> obstacles;
 
@@ -74,6 +77,9 @@ class ChartManager
         bakamitaiChart = new BakamitaiChart();
         loopingTheRoomsChart = new LoopingTheRoomsChart();
         irisOutChart = new irisOutChart();
+        rulerOfMyHeart = new RulerOfMyHeartChart();
+        blueGiantChart = new BlueGiantChart();
+        tarkanopChart = new TarkanopChart();
 
         
 

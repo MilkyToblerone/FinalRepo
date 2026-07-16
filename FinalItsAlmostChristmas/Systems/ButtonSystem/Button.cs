@@ -78,7 +78,7 @@ public class Button
         Vector2 textSize = font.MeasureString(Text);
         Vector2 origin = textSize * 0.5f;
         
-        spriteBatch.DrawString(font, Text, drawPosition + origin, drawColor, 0f, origin, currentScale, SpriteEffects.None, 0f);
+        spriteBatch.DrawString(font, Text, drawPosition + origin, drawColor, 0f, origin, currentScale, SpriteEffects.None, 1f);
     }
 
     public void Press()

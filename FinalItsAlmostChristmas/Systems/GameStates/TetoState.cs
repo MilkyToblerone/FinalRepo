@@ -27,8 +27,19 @@ namespace FinalItsAlmostChristmas
         Button loopingTheRooms;
         ScaleableSprite loopingTheRoomsCover;
 
+        Button rulerOfMyHeartButton;
+        ScaleableSprite rulerOfMyHeartCover;
+
+
+        Button tarkanopButton;
+        ScaleableSprite tarkanopCover;
+
         SongState songState;
         TutorialState tutorialState;
+
+        private const float CoverSize = 225f;
+        private const float TopRowY = 322.5f;
+        private const float BottomRowY = 730f;
         
         public TetoState(Game1 game1, SpriteBatch spriteBatch) : base(game1, spriteBatch)
         {
@@ -37,29 +48,53 @@ namespace FinalItsAlmostChristmas
             songStateButtonManager = new(ButtonTypes.LeftToRight);
             songStateButtonManager.isBeingUsed = false;
 
-            tutorialButton = new(new Vector2(60, 330), "Tutorial",TexturesAndFonts.getInstance().fightFontSmall);
-            tutorialCover = new(TexturesAndFonts.getInstance().tutorialCover, new Vector2(150, 200), 0.5f);
+            float spacing = (1920f - (4f * CoverSize)) / 5f;
+            float topRowLeftInset = (1920f - (4f * CoverSize + 3f * spacing)) / 2f;
+            float bottomRowLeftInset = (1920f - (2f * CoverSize + spacing)) / 2f;
 
-            bookendSongButton = new(new Vector2(410, 330), "Bookend Song",TexturesAndFonts.getInstance().fightFontSmall);
-            bookendSongCover = new(TexturesAndFonts.getInstance().bookendCover, new Vector2(550, 200), 0.5f);
+            Vector2[] topRowPositions = new Vector2[4];
+            for (int i = 0; i < topRowPositions.Length; i++)
+            {
+                topRowPositions[i] = new Vector2(topRowLeftInset + (CoverSize / 2f) + i * (CoverSize + spacing), TopRowY);
+            }
 
-            bakamitaiButton = new(new Vector2(820, 330), "Bakamitai",TexturesAndFonts.getInstance().fightFontSmall);
-            bakamitaiCover = new(TexturesAndFonts.getInstance().bakamitaiCover, new Vector2(950, 200), 0.5f);
+            Vector2[] bottomRowPositions = new Vector2[2];
+            for (int i = 0; i < bottomRowPositions.Length; i++)
+            {
+                bottomRowPositions[i] = new Vector2(bottomRowLeftInset + (CoverSize / 2f) + i * (CoverSize + spacing), BottomRowY);
+            }
 
-            loopingTheRooms = new(new Vector2(1220, 330), "Looping the \n    rooms", TexturesAndFonts.getInstance().fightFontSmall);
-            loopingTheRoomsCover = new(TexturesAndFonts.getInstance().loopingTheRoomsCover, new Vector2(1350, 200), 0.5f);
+            tutorialButton = new(topRowPositions[0] + new Vector2(-90 , + 140), "Tutorial", TexturesAndFonts.getInstance().fightFontSmall);
+            tutorialCover = new(TexturesAndFonts.getInstance().tutorialCover, topRowPositions[0], 0.5f);
 
+            bookendSongButton = new(topRowPositions[1]+ new Vector2(-130 , + 140), "Bookend Song", TexturesAndFonts.getInstance().fightFontSmall);
+            bookendSongCover = new(TexturesAndFonts.getInstance().bookendCover, topRowPositions[1], 0.5f);
+
+            bakamitaiButton = new(topRowPositions[2]+ new Vector2(-110 , + 140), "Bakamitai", TexturesAndFonts.getInstance().fightFontSmall);
+            bakamitaiCover = new(TexturesAndFonts.getInstance().bakamitaiCover, topRowPositions[2], 0.5f);
+
+            loopingTheRooms = new(topRowPositions[3]+ new Vector2(-130 , + 140), "Looping the \n    rooms", TexturesAndFonts.getInstance().fightFontSmall);
+            loopingTheRoomsCover = new(TexturesAndFonts.getInstance().loopingTheRoomsCover, topRowPositions[3], 0.5f);
+
+            rulerOfMyHeartButton = new(bottomRowPositions[0]+ new Vector2(-130 , + 140), "Ruler of My\n    Heart", TexturesAndFonts.getInstance().fightFontSmall);
+            rulerOfMyHeartCover = new(TexturesAndFonts.getInstance().rulerOfMyHeartCover, bottomRowPositions[0], 0.5f);
+
+            tarkanopButton = new(bottomRowPositions[1]+ new Vector2(-110 , + 140), "Secret Song", TexturesAndFonts.getInstance().fightFontSmall);
+            tarkanopCover = new(TexturesAndFonts.getInstance().tarkanopCover, bottomRowPositions[1], 0.5f);
 
             songStateButtonManager.buttons.Add(tutorialButton);
             songStateButtonManager.buttons.Add(bookendSongButton);
             songStateButtonManager.buttons.Add(bakamitaiButton);
             songStateButtonManager.buttons.Add(loopingTheRooms);
-
+            songStateButtonManager.buttons.Add(rulerOfMyHeartButton);
+            songStateButtonManager.buttons.Add(tarkanopButton);
 
             tutorialButton.OnPressed += SwitchoverToTutorial;
             bookendSongButton.OnPressed += SwitchoverToBookendSong;
             bakamitaiButton.OnPressed += SwitchovertoBakamitai;
             loopingTheRooms.OnPressed += SwitchoverToLoopingTheRooms;
+            rulerOfMyHeartButton.OnPressed += SwitchoverToRulerOfMyHeart;
+            tarkanopButton.OnPressed += SwitchoverToTarkanop;
             ResultState.songState = songState;
         }
 
@@ -93,6 +128,8 @@ namespace FinalItsAlmostChristmas
             tutorialCover.Draw(_spritebatch, tutorialButton.currentScale / 2 );
             bakamitaiCover.Draw(_spritebatch, bakamitaiButton.currentScale / 2);
             loopingTheRoomsCover.Draw(_spritebatch, loopingTheRooms.currentScale/2);
+            rulerOfMyHeartCover.Draw(_spritebatch, rulerOfMyHeartButton.currentScale / 2);
+            tarkanopCover.Draw(_spritebatch, tarkanopButton.currentScale / 2);
 
             bookendSongCover.Draw(_spritebatch, bookendSongButton.currentScale/2);
         }
@@ -115,6 +152,19 @@ namespace FinalItsAlmostChristmas
         private void SwitchoverToLoopingTheRooms()
         {
             ChartManager.getInstance().SetChart(ChartManager.getInstance().loopingTheRoomsChart);
+            StateManager.SwitchState(songState);
+        }
+
+        private void SwitchoverToRulerOfMyHeart()
+        {
+            ChartManager.getInstance().SetChart(ChartManager.getInstance().rulerOfMyHeart);
+            StateManager.SwitchState(songState);
+        }
+
+
+        private void SwitchoverToTarkanop()
+        {
+            ChartManager.getInstance().SetChart(ChartManager.getInstance().tarkanopChart);
             StateManager.SwitchState(songState);
         }
     }

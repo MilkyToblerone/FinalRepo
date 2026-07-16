@@ -14,6 +14,9 @@ class TexturesAndFonts
     public Song popipo;
     public Song bakamitai;
     public Song irisOut;
+    public Song rulerOfMyHeart;
+    public Song blueGiant;
+    public Song tarkanop;
     public SoundEffect clickSFX;
     public Texture2D bubbleBaseTexture;
     public Texture2D bubbleCircleTexture;
@@ -24,6 +27,8 @@ class TexturesAndFonts
     public Texture2D tutorialCover;
     public Texture2D bakamitaiCover;
     public Texture2D loopingTheRoomsCover;
+    public Texture2D rulerOfMyHeartCover;
+    public Texture2D tarkanopCover;
     public Texture2D bookendCover;
     public SoundEffect selectSFX;
     public Texture2D dirtTexture;
@@ -38,6 +43,10 @@ class TexturesAndFonts
     public Texture2D badReactionTexture;
     public Texture2D missReactionTexture;
     public Texture2D resultScreen;
+    public Texture2D chibiCredits;
+    public Texture2D kerimCredits;
+    public Texture2D CREDITS;
+
 
     public SpriteFont fightFont;
     public SpriteFont fightFontSmall;
@@ -95,6 +104,9 @@ class TexturesAndFonts
         bakamitai = game1.Content.Load<Song>("BakaMitai");
         loopingTheRooms = game1.Content.Load<Song>("LoopingtheRooms");
         irisOut = game1.Content.Load<Song>("irisout");
+        rulerOfMyHeart = game1.Content.Load<Song>("RulerofmyHeart");
+        blueGiant = game1.Content.Load<Song>("bluegiant");
+        tarkanop = game1.Content.Load<Song>("tarkanop");
 
         fightFont = game1.Content.Load<SpriteFont>("Fonts/FightFont");
         fightFontSmall = game1.Content.Load<SpriteFont>("Fonts/FightFontSmall");
@@ -102,6 +114,9 @@ class TexturesAndFonts
         blissBoutique = game1.Content.Load<Song>("BlissBoutique");
         mainMenuBG = game1.Content.Load<Texture2D>("Mine_MainMenu");
         songSelectBG = game1.Content.Load<Texture2D>("SongSelect_BG");
+        chibiCredits = game1.Content.Load<Texture2D>("Chibi_Credits");
+        kerimCredits = game1.Content.Load<Texture2D>("Kerim");
+        CREDITS = game1.Content.Load<Texture2D>("CREDITS");
 
 
         bookendCover = game1.Content.Load<Texture2D>("bookendsongcover");
@@ -109,7 +124,8 @@ class TexturesAndFonts
         tutorialCover = game1.Content.Load<Texture2D>("TutorialCover");
         bakamitaiCover = game1.Content.Load<Texture2D>("bakamitaicover");
         loopingTheRoomsCover = game1.Content.Load<Texture2D>("loopingtheroomscover");
-
+        rulerOfMyHeartCover = game1.Content.Load<Texture2D>("rulerofmyheartcover");
+        tarkanopCover = game1.Content.Load<Texture2D>("secretsongcover");
 
         selectSFX = game1.Content.Load<SoundEffect>("Select");
         dirtTexture = game1.Content.Load<Texture2D>("DirtObs");

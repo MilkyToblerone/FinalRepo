@@ -10,6 +10,8 @@ public class Game1 : Game
     private SpriteBatch _spriteBatch;
     private MikuState mikuState;
     private TetoState tetoState;
+    private CreditsState creditsState;
+    private ChartMaker chartMaker;
     
 
     public Game1()
@@ -36,10 +38,12 @@ public class Game1 : Game
         TexturesAndFonts.getInstance().Load();
         ChartManager.getInstance().Load();
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+        creditsState = new CreditsState(this,_spriteBatch);
         tetoState = new TetoState(this,_spriteBatch);
-        mikuState = new MikuState(this,_spriteBatch,tetoState);
+        mikuState = new MikuState(this,_spriteBatch,tetoState,creditsState);
         mikuState.LoadContent();
         tetoState.LoadContent();
+        creditsState.LoadContent(mikuState);
         tetoState.mainMenuScene = mikuState;
         StateManager.Initialize(mikuState);
         ResultState.mikuState = mikuState;
@@ -59,7 +63,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(new Color(15, 9, 9));
         _spriteBatch.Begin(SpriteSortMode.FrontToBack);
         StateManager.GetCurrentState().Draw(gameTime);
-        base.Draw(gameTime);
         _spriteBatch.End();
+        base.Draw(gameTime);
     }
 }
