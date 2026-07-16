@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinalItsAlmostChristmas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab34d7f3d85b10023b6865b67d033ecfa36c2988")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c41734e77db17b6a2b6d884e49a58100a5a577d1")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinalItsAlmostChristmas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinalItsAlmostChristmas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

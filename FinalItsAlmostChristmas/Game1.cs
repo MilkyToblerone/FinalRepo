@@ -11,7 +11,6 @@ public class Game1 : Game
     private MikuState mikuState;
     private TetoState tetoState;
     private CreditsState creditsState;
-    private ChartMaker chartMaker;
     
 
     public Game1()
@@ -19,9 +18,11 @@ public class Game1 : Game
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         _graphics.PreferredBackBufferWidth = 1920;
-        _graphics.PreferredBackBufferHeight = 1080;
+        _graphics.PreferredBackBufferHeight =  1080;
         IsMouseVisible = false;
         _graphics.IsFullScreen = true;
+
+        Window.IsBorderless = true;
     }
 
     protected override void Initialize()

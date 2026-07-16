@@ -101,3 +101,17 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\loopingtheroomscover.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Popipo.ogg
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Popipo.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\bluegiant.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\bluegiant.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Chibi_Credits.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\CREDITS.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\Kerim.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\RulerofmyHeart.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\RulerofmyHeart.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\rulerofmyheartcover.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\secretsongcover.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\tarkanop.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\Content\tarkanop.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\runtimes\win-arm64\native\openal.dll
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\runtimes\linux-arm64\native\libSDL2-2.0.so.0
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\runtimes\win-arm64\native\SDL2.dll

@@ -8,6 +8,8 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/bakamitaicover.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/BlissBoutique.ogg
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/BlissBoutique.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/bluegiant.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/bluegiant.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/BookendOpening.ogg
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/BookendOpening.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/bookendsongcover.xnb
@@ -16,7 +18,9 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/brokenObsPlaceholder.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/BR_Miku.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Bubble.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Chibi_Credits.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Circle.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/CREDITS.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/dirtBGPlaceholder.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/DirtDestroySFX.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/DirtObs.xnb
@@ -30,6 +34,7 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Icon_Shovel.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/irisout.ogg
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/irisout.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Kerim.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/LoopingtheRooms.ogg
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/LoopingtheRooms.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/loopingtheroomscover.xnb
@@ -48,10 +53,16 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Reactions\Perfect_Face.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/ResultScreen.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/RockObs.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/RulerofmyHeart.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/RulerofmyHeart.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/rulerofmyheartcover.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/secretsongcover.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Select.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/ShovelAnimSheet.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Side_Wall.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/SongSelect_BG.xnb
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/tarkanop.ogg
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/tarkanop.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Tiers\PenWriting.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Tiers\Tier_A.xnb
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\Content/Tiers\Tier_B.xnb
@@ -84,7 +95,10 @@ C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmost
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\linux-arm64\native\libopenal.so
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\linux-x64\native\libopenal.so
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\osx\native\libopenal.dylib
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\win-arm64\native\openal.dll
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\win-x64\native\openal.dll
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\linux-arm64\native\libSDL2-2.0.so.0
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\linux-x64\native\libSDL2-2.0.so.0
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\win-arm64\native\SDL2.dll
 C:\Users\doguh\Desktop\GP2Files\FinalItsAlmostChristmas\FinalRepo\FinalItsAlmostChristmas\bin\Release\net9.0\publish\runtimes\win-x64\native\SDL2.dll
